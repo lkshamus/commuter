@@ -1,4 +1,4 @@
-import {apiKeyWeather} from './APIKeys.js';
+import {apiKeyWeather} from './APIKey.js';
 
 export const searchWeatherByCity = `http://api.openweathermap.org/data/2.5/weather?q=denver,US&appid=${apiKeyWeather}`
 
