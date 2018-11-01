@@ -11,3 +11,10 @@ export const isLoading = (bool) => {
     isLoading: bool
   }
 }
+
+export const updateSearchWeather = (searchWeather) => {
+  return {
+    type: 'UPDATE_WEATHER_SEARCH',
+    searchWeather
+  }
+}
