@@ -14,10 +14,12 @@ export class CurrentWeather extends Component {
 
   render () {
     try{
+      console.log(this.props.currentWeather.weather[0].main)
        return (
       <div>
-        <h1>weather in {this.props.currentWeather.name}</h1>
-        <h1>weather in {Math.round((this.props.currentWeather.main.temp - 273.15) * 9 / 5 + 32)}°F</h1>
+        <h1>Weather in {this.props.currentWeather.name}</h1>
+        <h1>Weather in {Math.round((this.props.currentWeather.main.temp - 273.15) * 9 / 5 + 32)}°F</h1>
+        <h1>Current Conditions: {this.props.currentWeather.weather[0].description}</h1>
       </div>
     )
     } catch {
