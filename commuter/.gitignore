@@ -18,6 +18,8 @@
 .env.test.local
 .env.production.local
 .APIKeys
+.apiKeyMap
+.apiKeyWeather
 
 npm-debug.log*
 yarn-debug.log*
