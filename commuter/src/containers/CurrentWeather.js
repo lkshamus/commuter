@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import { getCurrentWeather} from '../actions/thunks/currentWeatherThunk'
 import { setCurrentWeather } from '../actions'
+import { SearchWeather } from './SearchWeather'
 import Loading from '../components/Loading/index'
 
 export class CurrentWeather extends Component {
@@ -14,7 +15,6 @@ export class CurrentWeather extends Component {
 
   render () {
     try{
-      console.log(this.props.currentWeather.weather[0].main)
        return (
       <div>
         <h1>Weather in {this.props.currentWeather.name}</h1>
