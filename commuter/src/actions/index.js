@@ -4,3 +4,10 @@ export const setCurrentWeather = (weather) => {
     weather
   }
 }
+
+export const isLoading = (bool) => {
+  return {
+    type: 'IS_LOADING',
+    isLoading: bool
+  }
+}

@@ -19,7 +19,7 @@ export class CurrentWeather extends Component {
 
 
 
-    try{
+    // try{
 
        return (
       <div>
@@ -28,14 +28,14 @@ export class CurrentWeather extends Component {
       </div>
     )
 
-    } catch {
+    // } catch {
 
       return (
       <div>
         <h1>loading weather</h1>
       </div>
     )
-    }
+    // }
   }
 }
 
