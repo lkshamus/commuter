@@ -4,22 +4,15 @@ import PropTypes from 'prop-types';
 
 import { getCurrentWeather} from '../actions/thunks/currentWeatherThunk'
 import { setCurrentWeather } from '../actions'
-
+import Loading from '../components/Loading/index'
 export class CurrentWeather extends Component {
 
  async componentDidMount() {
     await this.props.displayWeather(this.props.currentWeather)
   }
 
-  // weather = this.props.currentWeather
-
-          // (k - 273.15) * 9 / 5 + 32
-
   render () {
-
-
-
-    // try{
+    try{
 
        return (
       <div>
@@ -28,19 +21,17 @@ export class CurrentWeather extends Component {
       </div>
     )
 
-    // } catch {
-
+    } catch {
       return (
-      <div>
-        <h1>loading weather</h1>
-      </div>
-    )
-    // }
+      <Loading />
+      )
+    }
   }
 }
 
 export const mapStateToProps = (state) => ({
-  currentWeather: state.currentWeather
+  currentWeather: state.currentWeather,
+  isLoading: state.isLoading
 });
 
 export const mapDispatchToProps = (dispatch) => ({
