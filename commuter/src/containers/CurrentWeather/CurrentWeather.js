@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { getCurrentWeather} from '../actions/thunks/currentWeatherThunk'
-import { setCurrentWeather } from '../actions'
-import { SearchWeather } from './SearchWeather'
-import Loading from '../components/Loading/index'
+import { getCurrentWeather} from '../../actions/thunks/currentWeatherThunk'
+import { setCurrentWeather } from '../../actions'
+import Loading from '../../components/Loading/index'
 
 export class CurrentWeather extends Component {
 

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { updateSearchWeather } from '../actions'
-import { getCurrentWeather } from '../actions/thunks/searchWeatherThunk'
-import { setCurrentWeather } from '../actions'
-import Loading from '../components/Loading/index'
+import { updateSearchWeather } from '../../actions'
+import { getCurrentWeather } from '../../actions/thunks/searchWeatherThunk'
+import { setCurrentWeather } from '../../actions'
+import Loading from '../../components/Loading/index'
 
 export class SearchWeather extends Component {
   constructor() {
@@ -28,7 +28,6 @@ export class SearchWeather extends Component {
   };
 
   render() {
-      console.log(this.props)
     return (
       <form
         onSubmit={this.handleSubmitSearch}>
