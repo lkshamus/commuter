@@ -18,3 +18,10 @@ export const updateSearchWeather = (searchWeather) => {
     searchWeather
   }
 }
+
+export const setDirections = (directions) => {
+  return {
+    type: 'SET_DIRECTION',
+    directions
+  }
+}
