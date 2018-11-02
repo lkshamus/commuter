@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CurrentWeather from './containers/CurrentWeather'
+import  SearchWeather  from './containers/SearchWeather'
 import './App.css';
 
 class App extends Component {
@@ -7,7 +8,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1>commuter</h1>
-        <CurrentWeather CurrentWeather={this.props.currentWeather} />
+        <SearchWeather />
+        <CurrentWeather />
       </div>
     );
   }
