@@ -13,14 +13,21 @@ export class CurrentDirections extends Component {
     await this.props.displayDirections(this.props.directions.route)
     }
 
+
+toStandardTime = (militaryTime) => {
+    militaryTime = militaryTime.split(':');
+    return (militaryTime[0].charAt(0) == 1 && militaryTime[0].charAt(1) > 2) ? (militaryTime[0] - 12) + ':' + militaryTime[1] + ':' + militaryTime[2] + ' P.M.' : militaryTime.join(':') + ' A.M.'
+}
+
   render () {
     try{
-      console.log(this.props.directions.route.formattedTime)
+      console.log(this.props.directions)
       return (
         <div>
           <h1>Starting location : {this.props.directions.route.locations[0].adminArea5}</h1>
           <h1>Starting location : {this.props.directions.route.locations[1].adminArea5}</h1>
-          <h1>Time of Arrival : {this.props.directions.route.formattedTime}</h1>
+          <h1>Travel Time : {
+            (this.props.directions.route.formattedTime)}</h1>
         </div>
       )
     } catch {
@@ -37,7 +44,7 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  displayDirections: (data) => dispatch(getCurrentDirections(data))
+  displayDirections: (origin, departure) => dispatch(getCurrentDirections(origin, departure))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CurrentDirections);
