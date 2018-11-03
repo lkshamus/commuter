@@ -33,23 +33,23 @@ export const updateDirections = (searchedDirections) => {
   }
 }
 
-export const setTransitDirections = (transitDirections) => {
-  return {
-    type: 'SET_TRANSIT_DIRECTIONS', 
-    transitDirections
-  }
-}
+// export const setTransitDirections = (directions) => {
+//   return {
+//     type: 'SET_TRANSIT_DIRECTIONS', 
+//     directions
+//   }
+// }
 
-export const setBikeDirections = (bikeDirections) => {
-  return {
-    type: 'SET_BIKE_DIRECTIONS',
-    bikeDirections
-  }
-}
+// export const setBikeDirections = (bikeDirections) => {
+//   return {
+//     type: 'SET_BIKE_DIRECTIONS',
+//     bikeDirections
+//   }
+// }
 
-export const setWalkingDirections = (walkingDirections) => {
-  return {
-    type: 'SET_WALKING_DIRECTIONS', 
-    walkingDirections
-  }
-}
+// export const setWalkingDirections = (walkingDirections) => {
+//   return {
+//     type: 'SET_WALKING_DIRECTIONS', 
+//     walkingDirections
+//   }
+// }

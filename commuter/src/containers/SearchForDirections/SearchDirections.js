@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import { updateSearchWeather } from '../../actions'
 import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk'
+// import { getCurrentDrivingDirections } from '../../actions/thunks/originAndDepartureThunk'
 import { setDirections, updateDirections } from '../../actions'
 import { getCurrentWeather } from '../../actions/thunks/searchWeatherThunk'
 import { setCurrentWeather } from '../../actions'
@@ -14,7 +15,8 @@ export class SearchDirections extends Component {
     super()
     this.state = {
       origin: '',
-      departure: ''
+      departure: '',
+      mode: ''
     }
   }
 
@@ -24,17 +26,18 @@ export class SearchDirections extends Component {
     })
   };
 
+  handleRadioChange = (e) => {
+  this.setState({
+    mode: e.target.value
+  });
+}
+
   handleSubmitSearch = async (e) => {
     e.preventDefault();
-    console.log('event', e)
-    this.props.getNewDirections(this.state.origin, this.state.departure)
+    this.props.getNewDirections(this.state.origin, this.state.departure, this.state.mode)
     let startCoordinates = this.props.directions.routes[0].legs[0].start_location 
     let endCoordinates = this.props.directions.routes[0].legs[0].end_location
     await this.props.displayWeatherStart(startCoordinates)
-    await this.props.displayWeatherEnd(endCoordinates)
-    // await this.props.displaySearchedWeather(startCoordinates)
-    // this.props.displayWeather(this.state.origin)
-    // this.props.displaySearchedWeather(this.state.origin)
   };
 
   render() {
@@ -56,30 +59,48 @@ export class SearchDirections extends Component {
         onChange={(e) => this.handleChange(e)}       
         />
         <div>
-          <button 
-          name='bicycle' 
-          value='bicycle'
-          onClick={this.handleSubmitSearch}
-          >
-          Bicycle</button>
-          <button 
-          name='walking' 
-          value='walking'
-          onClick={this.handleSubmitSearch}
-          >
-          Walking</button>
-          <button 
-          name='transit' 
-          value='transit'
-          onClick={this.handleSubmitSearch}
-          >
-          Transit</button>
-          <button 
-          name='driving' 
-          value='driving'
-          onClick={this.handleSubmitSearch}
-          >
-          Driving</button>
+
+          <label>
+            <input 
+            type='radio' 
+            value='transit' 
+            name='radio' 
+            checked={this.state.mode === 'transit'}
+            onChange={this.handleRadioChange}
+            />
+            Transit
+          </label>
+
+          <label>
+            <input 
+            type='radio' 
+            value='walking' 
+            name='radio'
+            checked={this.state.mode === 'walking'}
+            onChange={this.handleRadioChange}
+            />
+            Walking
+          </label>
+           <label>
+            <input 
+            type='radio' 
+            value='bicycling' 
+            name='radio'
+            checked={this.state.mode === 'bicycling'}
+            onChange={this.handleRadioChange}
+            />
+            bicycling
+          </label>
+          <label>
+            <input 
+            type='radio' 
+            value='driving' 
+            name='radio'
+            checked={this.state.mode === 'driving'}
+            onChange={this.handleRadioChange}
+            />
+            driving
+          </label>
         </div>
         <button>submit</button>
       </form>
@@ -95,9 +116,10 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  getNewDirections: (origin, departure) => dispatch(getCurrentDirections(origin, departure)),
+  getNewDirections: (origin, departure, mode) => dispatch(getCurrentDirections(origin, departure, mode)),
   displayWeatherStart: (city) => dispatch(getCurrentWeather(city)),
-  displayWeatherEnd: (city) => dispatch(getCurrentWeather(city)),
+  // displayWeatherEnd: (city) => dispatch(getCurrentWeather(city)),
+  // getDrivingDirections: (origin, departure) => dispatch(getCurrentDrivingDirections(origin, departure))
   // displaySearchedWeather: (city) => dispatch(updateSearchWeather(city))
   // displayNewDirections: (city) => dispatch(updateDirections(city))
 });
