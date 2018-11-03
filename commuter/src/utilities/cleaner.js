@@ -1,18 +1,17 @@
-import {apiKeyWeather, apiKeyMap} from './APIkey.js';
+import {apiKeyWeather, apiKeyMap, gmapApi} from './APIkey.js';
 
 export const defaultWeatherByCity = `http://api.openweathermap.org/data/2.5/weather?q=denver,US&appid=${apiKeyWeather}`
 
-export const searchWeatherByCity = (city) => {
- const url = `http://api.openweathermap.org/data/2.5/weather?q=${city},US&appid=${apiKeyWeather}`
+export const searchWeatherByCity = (coordinates) => {
+  console.log("Weather coordinates input", coordinates)
+ const url = `http://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lng}&appid=${apiKeyWeather}`
  return url
 }
 
-export const searchDirections = (origin, departure) => `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${departure}&mode=transit&key=${apiKeyMap}`
 
-
-export const searchedDirections = `http://www.mapquestapi.com/directions/v2/route?key=${apiKeyMap}&from=Denver&to=Boulder`
-
-export const orignAndDeparture = (origin, departure) => {
-  const url = `http://www.mapquestapi.com/directions/v2/route?key=${apiKeyMap}&from=${origin}&to=${departure}`
+export const orignAndDeparture = (origin, destination) => {
+  const proxy_url = 'https://cors-anywhere.herokuapp.com/';
+  let target_url = `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination}&mode=transit&key=`;
+  const url = `${proxy_url}${target_url}${gmapApi}`
   return url
 } 

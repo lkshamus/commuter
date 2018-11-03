@@ -32,3 +32,24 @@ export const updateDirections = (searchedDirections) => {
   searchedDirections
   }
 }
+
+export const setTransitDirections = (transitDirections) => {
+  return {
+    type: 'SET_TRANSIT_DIRECTIONS', 
+    transitDirections
+  }
+}
+
+export const setBikeDirections = (bikeDirections) => {
+  return {
+    type: 'SET_BIKE_DIRECTIONS',
+    bikeDirections
+  }
+}
+
+export const setWalkingDirections = (walkingDirections) => {
+  return {
+    type: 'SET_WALKING_DIRECTIONS', 
+    walkingDirections
+  }
+}

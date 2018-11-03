@@ -5,18 +5,18 @@ import { isLoading, setDirections } from '../index'
 export const getCurrentDirections = (origin, departure) => {
   return async (dispatch) => {
     dispatch(isLoading(true));
-    try {
+   try {
+    console.log('START:', origin, departure)
       const directions = await fetchCall(cleaner.orignAndDeparture(origin, departure));
-      console.log(directions)
       // if (weather === 'failed') {
       //   dispatch(setIsOk(true));
       // }
       dispatch(isLoading(false));
       return dispatch(setDirections(directions));
-    } catch(error) {
+   } catch(error) {
       console.log('this is the error block')
       console.log(error.message)
-      // dispatch(setHasErrored(true));
-    }
+     // dispatch(setHasErrored(true));
+   }
   }
 }

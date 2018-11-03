@@ -24,12 +24,17 @@ export class SearchDirections extends Component {
     })
   };
 
-  handleSubmitSearch = (e) => {
+  handleSubmitSearch = async (e) => {
     e.preventDefault();
+    console.log('event', e)
     this.props.getNewDirections(this.state.origin, this.state.departure)
-    this.props.displayWeather(this.state.origin)
-    this.props.displaySearchedWeather(this.state.origin)
-    // this.props.displayNewDirections(this.state.origin + this.state.departure)
+    let startCoordinates = this.props.directions.routes[0].legs[0].start_location 
+    let endCoordinates = this.props.directions.routes[0].legs[0].end_location
+    await this.props.displayWeatherStart(startCoordinates)
+    await this.props.displayWeatherEnd(endCoordinates)
+    // await this.props.displaySearchedWeather(startCoordinates)
+    // this.props.displayWeather(this.state.origin)
+    // this.props.displaySearchedWeather(this.state.origin)
   };
 
   render() {
@@ -50,6 +55,32 @@ export class SearchDirections extends Component {
         value={this.state.departure}
         onChange={(e) => this.handleChange(e)}       
         />
+        <div>
+          <button 
+          name='bicycle' 
+          value='bicycle'
+          onClick={this.handleSubmitSearch}
+          >
+          Bicycle</button>
+          <button 
+          name='walking' 
+          value='walking'
+          onClick={this.handleSubmitSearch}
+          >
+          Walking</button>
+          <button 
+          name='transit' 
+          value='transit'
+          onClick={this.handleSubmitSearch}
+          >
+          Transit</button>
+          <button 
+          name='driving' 
+          value='driving'
+          onClick={this.handleSubmitSearch}
+          >
+          Driving</button>
+        </div>
         <button>submit</button>
       </form>
     )
@@ -59,13 +90,15 @@ export class SearchDirections extends Component {
 
 export const mapStateToProps = (state) => ({
   directions: state.directions,
+  startWeather: state.test,
   isLoading: state.isLoading
 });
 
 export const mapDispatchToProps = (dispatch) => ({
   getNewDirections: (origin, departure) => dispatch(getCurrentDirections(origin, departure)),
-  displayWeather: (city) => dispatch(getCurrentWeather(city)),
-  displaySearchedWeather: (city) => dispatch(updateSearchWeather(city))
+  displayWeatherStart: (city) => dispatch(getCurrentWeather(city)),
+  displayWeatherEnd: (city) => dispatch(getCurrentWeather(city)),
+  // displaySearchedWeather: (city) => dispatch(updateSearchWeather(city))
   // displayNewDirections: (city) => dispatch(updateDirections(city))
 });
 
