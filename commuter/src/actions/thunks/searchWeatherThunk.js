@@ -7,7 +7,7 @@ export const getCurrentWeather = (city) => {
     dispatch(isLoading(true));
     try {
       const weather = await fetchCall(cleaner.searchWeatherByCity(city));
-      console.log('look at this from search thunk', weather)
+      console.log('weather results:', weather)
       // if (weather === 'failed') {
       //   dispatch(setIsOk(true));
       // }
