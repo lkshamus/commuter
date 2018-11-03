@@ -25,3 +25,10 @@ export const setDirections = (directions) => {
     directions
   }
 }
+
+export const updateDirections = (searchedDirections) => {
+  return {
+    type: 'UPDATE_DIRECTIONS',
+  searchedDirections
+  }
+}

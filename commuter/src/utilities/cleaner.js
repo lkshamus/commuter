@@ -11,3 +11,8 @@ export const searchDirections = (origin, departure) => `https://maps.googleapis.
 
 
 export const searchedDirections = `http://www.mapquestapi.com/directions/v2/route?key=${apiKeyMap}&from=Denver&to=Boulder`
+
+export const orignAndDeparture = (origin, departure) => {
+  const url = `http://www.mapquestapi.com/directions/v2/route?key=${apiKeyMap}&from=${origin}&to=${departure}`
+  return url
+} 
