@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { NavLink } from "react-router-dom";
 
 import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk'
 import { getCurrentDrivingDirections } from '../../actions/thunks/originAndDepartureThunk'
@@ -9,7 +8,9 @@ import { setDirections } from '../../actions'
 import { getCurrentWeather } from '../../actions/thunks/searchWeatherThunk'
 import { setCurrentWeather } from '../../actions'
 import { updateSearchWeather } from '../../actions'
+import CurrentWeather from '../CurrentWeather/CurrentWeather'
 import Loading from '../../components/Loading/index'
+import './CurrentDirections.css'
 
 export class CurrentDirections extends Component {
 
@@ -21,12 +22,14 @@ export class CurrentDirections extends Component {
   render () {
     try{
         return (
-          <div>
-            <NavLink to='/'> <button>Redo Search</button></NavLink>
-            <h1>Starting Address: {this.props.directions.routes[0].legs[0].start_address}</h1>
-            <h1>Ending Address: {this.props.directions.routes[0].legs[0].end_address}</h1>
-            <h1>Time until Destination: {this.props.directions.routes[0].legs[0].duration.text}</h1>
-            <h1>Miles to Destination: {this.props.directions.routes[0].legs[0].distance.text}</h1>
+          <div className='display-directions'>
+            <div className='direction-text'>
+              <h3> <span className='text'>Starting Address: </span> {this.props.directions.routes[0].legs[0].start_address}</h3>
+              <h3> <span className='text'> Ending Address:</span> {this.props.directions.routes[0].legs[0].end_address}</h3>
+              <h3> <span className='text'> Travel Time:</span> {this.props.directions.routes[0].legs[0].duration.text}</h3>
+              <h3> <span className='text'> Distance in Miles:</span> {this.props.directions.routes[0].legs[0].distance.text}</h3>
+            </div>  
+            <CurrentWeather />
           </div>
       )
     } catch {

@@ -72,7 +72,7 @@ export class SearchDirections extends Component {
               checked={this.state.mode === 'transit'}
               onChange={this.handleRadioChange}
               />
-              Transit
+              transit
            </label>
           </li>
           <li>
@@ -85,7 +85,7 @@ export class SearchDirections extends Component {
               checked={this.state.mode === 'walking'}
               onChange={this.handleRadioChange}
             />
-              Walking
+              walking
             </label>
           </li>
           <li>  

@@ -21,10 +21,6 @@ class App extends Component {
           exact path='/directions'
           component={CurrentDirections}
         />
-         <Route
-          exact path='/directions'
-          component={CurrentWeather}
-        />
       </div>
     );
   }

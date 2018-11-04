@@ -7,11 +7,14 @@ form {
 }
 
 .origin, .departure {
+  border-radius: 50px;
   font-size: 16px;
   grid-row: 1 / span 1;
   width: 400px;
   padding: 10px;
   margin: 25px;
+  outline: none;
+  border: .5px solid #c4d4e0;
 }
 
 
@@ -33,7 +36,6 @@ li {
   appearance: none;
   display: inline-block;
   position: relative;
-  background-color: #f1f1f1;
   color: #666;
   top: 10px;
   height: 30px;
@@ -53,7 +55,8 @@ li {
   transform: rotate(40deg);
 }
 .radio:hover {
-  background-color: #f7f7f7;
+  background-color: #193446;
+
 }
 
 .radio:checked {
@@ -72,8 +75,20 @@ label {
 
 .submit-btn {
   position: relative;
+  background-color: #c4d4e0;
   bottom: 200px;
   left: 770px;
+  color: #666;
   grid-row: 1 / span 1;
   font: 300 16px/1.7 'Open Sans', sans-serif;
+  border: 0;
+  width: 90px;
+  height: 43px;
+  border-radius: 50px;
+}
+
+.submit-btn:hover {
+  outline: none;
+  color: #ffffff;
+  background-color: #193446;
 }
