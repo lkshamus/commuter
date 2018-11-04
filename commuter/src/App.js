@@ -17,13 +17,21 @@ class App extends Component {
           exact path='/'
           component={SearchDirections}
         />
-        <Route
-          exact path='/directions'
+          <Route
+           exact path='/directions'
           component={CurrentDirections}
-        />
+            />
       </div>
     );
   }
 }
 
 export default App;
+
+
+ // <Route
+ //          exact path='/directions'
+ //          component={CurrentDirections}
+ //        />
+
+ // <NavLink to='/directions'> 

@@ -15,6 +15,7 @@ import './CurrentDirections.css'
 export class CurrentDirections extends Component {
 
  async componentDidMount() {
+  console.log(this.props.directions)
     await this.props.displayDirections(this.props.directions)
     // await this.props.displayDrivingDirections(this.props.directions.routes)
   }

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { NavLink } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router'
+import { Route } from 'react-router-dom';
+import { Redirect } from 'react-router-dom'
 
 import { updateSearchWeather } from '../../actions'
 import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk'
@@ -9,6 +13,7 @@ import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk
 import { setDirections, updateDirections } from '../../actions'
 import { getCurrentWeather } from '../../actions/thunks/searchWeatherThunk'
 import { setCurrentWeather } from '../../actions'
+import CurrentDirections from '../CurrentDirections/CurrentDirections'
 import Loading from '../../components/Loading/index'
 import './SearchDirections.css'
 
@@ -36,11 +41,25 @@ export class SearchDirections extends Component {
 
   handleSubmitSearch = async (e) => {
     e.preventDefault();
-    this.props.getNewDirections(this.state.origin, this.state.departure, this.state.mode)
+    console.log('test')
+    await this.props.getNewDirections(this.state.origin, this.state.departure, this.state.mode)
     let startCoordinates = this.props.directions.routes[0].legs[0].start_location 
     let endCoordinates = this.props.directions.routes[0].legs[0].end_location
     await this.props.displayWeatherStart(startCoordinates)
   };
+
+
+  componentWillUpdate = async () => {
+    let startCoordinates
+    let endCoordinates
+    await this.props.getNewDirections(this.state.origin, this.state.departure, this.state.mode)
+
+    if(this.state.origin && this.state.departure && this.state.mode){
+    startCoordinates = this.props.directions.routes[0].legs[0].start_location 
+    endCoordinates = this.props.directions.routes[0].legs[0].end_location
+    await this.props.displayWeatherStart(startCoordinates)
+  }
+  }
 
   render() {
     return (
@@ -60,7 +79,9 @@ export class SearchDirections extends Component {
         value={this.state.departure}
         onChange={(e) => this.handleChange(e)}       
         />
-        <NavLink to='/directions'> <button className='submit-btn'>submit</button></NavLink>
+      <NavLink to='/directions'> 
+       <button disabled={!this.state.mode}className='submit-btn'>submit</button>
+       </NavLink>
         <ul>
           <li>
             <label>
@@ -128,8 +149,8 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  getNewDirections: (origin, departure, mode) => dispatch(getCurrentDirections(origin, departure, mode)),
+  getNewDirections: (origin, departure, mode) => dispatch(getCurrentDirections(origin, departure, mode,)),
   displayWeatherStart: (city) => dispatch(getCurrentWeather(city)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchDirections);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchDirections));
