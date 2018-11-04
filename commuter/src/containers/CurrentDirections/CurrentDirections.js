@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { NavLink } from "react-router-dom";
 
 import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk'
 import { getCurrentDrivingDirections } from '../../actions/thunks/originAndDepartureThunk'
@@ -21,6 +22,7 @@ export class CurrentDirections extends Component {
     try{
         return (
           <div>
+            <NavLink to='/'> <button>Redo Search</button></NavLink>
             <h1>Starting Address: {this.props.directions.routes[0].legs[0].start_address}</h1>
             <h1>Ending Address: {this.props.directions.routes[0].legs[0].end_address}</h1>
             <h1>Time until Destination: {this.props.directions.routes[0].legs[0].duration.text}</h1>

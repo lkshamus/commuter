@@ -1,0 +1,14 @@
+
+.header-text {
+  color: #193446;
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  background-color: #c4d4e0; 
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 150px;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { NavLink } from "react-router-dom";
 
 import { updateSearchWeather } from '../../actions'
 import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk'
@@ -9,6 +10,7 @@ import { setDirections, updateDirections } from '../../actions'
 import { getCurrentWeather } from '../../actions/thunks/searchWeatherThunk'
 import { setCurrentWeather } from '../../actions'
 import Loading from '../../components/Loading/index'
+import './SearchDirections.css'
 
 export class SearchDirections extends Component {
   constructor() {
@@ -58,51 +60,61 @@ export class SearchDirections extends Component {
         value={this.state.departure}
         onChange={(e) => this.handleChange(e)}       
         />
-        <div>
-
-          <label>
-            <input 
-            type='radio' 
-            value='transit' 
-            name='radio' 
-            checked={this.state.mode === 'transit'}
-            onChange={this.handleRadioChange}
+        <NavLink to='/directions'> <button className='submit-btn'>submit</button></NavLink>
+        <ul>
+          <li>
+            <label>
+              <input 
+              className='radio'
+              type='checkbox' 
+              value='transit' 
+              name='radio' 
+              checked={this.state.mode === 'transit'}
+              onChange={this.handleRadioChange}
+              />
+              Transit
+           </label>
+          </li>
+          <li>
+            <label>
+              <input 
+              className='radio'
+              type='checkbox' 
+              value='walking' 
+              name='radio'
+              checked={this.state.mode === 'walking'}
+              onChange={this.handleRadioChange}
             />
-            Transit
-          </label>
-
-          <label>
-            <input 
-            type='radio' 
-            value='walking' 
-            name='radio'
-            checked={this.state.mode === 'walking'}
-            onChange={this.handleRadioChange}
-            />
-            Walking
-          </label>
-           <label>
-            <input 
-            type='radio' 
-            value='bicycling' 
-            name='radio'
-            checked={this.state.mode === 'bicycling'}
-            onChange={this.handleRadioChange}
-            />
-            bicycling
-          </label>
-          <label>
-            <input 
-            type='radio' 
-            value='driving' 
-            name='radio'
-            checked={this.state.mode === 'driving'}
-            onChange={this.handleRadioChange}
-            />
-            driving
-          </label>
-        </div>
-        <button>submit</button>
+              Walking
+            </label>
+          </li>
+          <li>  
+            <label>
+              <input 
+              className='radio'
+              type='checkbox' 
+              value='bicycling' 
+              name='radio'
+              checked={this.state.mode === 'bicycling'}
+              onChange={this.handleRadioChange}
+              />
+              bicycling
+            </label>
+          </li> 
+          <li> 
+            <label>
+              <input 
+              className='radio'
+              type='checkbox'  
+              value='driving' 
+              name='radio'
+              checked={this.state.mode === 'driving'}
+              onChange={this.handleRadioChange}
+              />
+              driving
+            </label>
+          </li>
+        </ul>
       </form>
     )
   }
@@ -118,10 +130,6 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   getNewDirections: (origin, departure, mode) => dispatch(getCurrentDirections(origin, departure, mode)),
   displayWeatherStart: (city) => dispatch(getCurrentWeather(city)),
-  // displayWeatherEnd: (city) => dispatch(getCurrentWeather(city)),
-  // getDrivingDirections: (origin, departure) => dispatch(getCurrentDrivingDirections(origin, departure))
-  // displaySearchedWeather: (city) => dispatch(updateSearchWeather(city))
-  // displayNewDirections: (city) => dispatch(updateDirections(city))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchDirections);
