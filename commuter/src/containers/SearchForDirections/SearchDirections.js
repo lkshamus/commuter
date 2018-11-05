@@ -7,7 +7,7 @@ import { withRouter } from 'react-router'
 import { Route } from 'react-router-dom';
 import { Redirect } from 'react-router-dom'
 
-import { updateSearchWeather } from '../../actions'
+// import { updateSearchWeather } from '../../actions'
 import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk'
 // import { getCurrentDrivingDirections } from '../../actions/thunks/originAndDepartureThunk'
 import { setDirections, updateDirections } from '../../actions'
@@ -46,24 +46,8 @@ export class SearchDirections extends Component {
     let startCoordinates = this.props.directions.routes[0].legs[0].start_location 
     let endCoordinates = this.props.directions.routes[0].legs[0].end_location
     await this.props.displayWeatherStart(startCoordinates)
+    this.props.history.push('/directions')
   };
-
-
-  componentWillUpdate = async () => {
-    let startCoordinates = 0
-    let endCoordinates = 0
-    await this.props.getNewDirections(this.state.origin, this.state.departure, this.state.mode)
-    if(this.state.origin && this.state.departure && this.state.mode){
-      if(this.props.directions.routes[0].legs[0].start_location && this.props.directions.routes[0].legs[0].end_location){
-      startCoordinates = this.props.directions.routes[0].legs[0].start_location   
-      endCoordinates = this.props.directions.routes[0].legs[0].end_location 
-      await this.props.displayWeatherStart(startCoordinates)
-      } else {
-        startCoordinates = 0
-        endCoordinates = 0 
-      }
-  }
-  }
 
   render() {
     return (
@@ -83,9 +67,7 @@ export class SearchDirections extends Component {
         value={this.state.departure}
         onChange={(e) => this.handleChange(e)}       
         />
-      <NavLink to='/directions'> 
        <button disabled={!this.state.mode}className='submit-btn'>submit</button>
-       </NavLink>
         <ul>
           <li>
             <label>
@@ -148,13 +130,13 @@ export class SearchDirections extends Component {
 
 export const mapStateToProps = (state) => ({
   directions: state.directions,
-  startWeather: state.startWeather,
+  weather: state.weather,
   isLoading: state.isLoading
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  getNewDirections: (origin, departure, mode) => dispatch(getCurrentDirections(origin, departure, mode,)),
+  getNewDirections: (origin, departure, mode) => dispatch(getCurrentDirections(origin, departure, mode)),
   displayWeatherStart: (city) => dispatch(getCurrentWeather(city)),
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchDirections));
+export default connect(mapStateToProps, mapDispatchToProps)(SearchDirections);

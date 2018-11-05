@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router'
 
 import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk'
 import { setDirections } from '../../actions'
@@ -13,14 +14,9 @@ import './CurrentDirections.css'
 
 export class CurrentDirections extends Component {
 
- async componentDidMount() {
-  console.log(this.props.directions)
-    await this.props.displayDirections(this.props.directions)
-  }
-
-  render () {
+ render () {
     try{
-        return (
+       return (
           <div className='display-directions'>
             <div className='direction-text'>
               <h3> <span className='text'>Starting Address: </span> {this.props.directions.routes[0].legs[0].start_address}</h3>
@@ -48,7 +44,7 @@ export const mapDispatchToProps = (dispatch) => ({
   displayDirections: (origin, departure) => dispatch(getCurrentDirections(origin, departure)),
   // displayDrivingDirections: (origin, departure) => dispatch(getCurrentDrivingDirections(origin, departure)),
   getWeather: (coordinates) => dispatch(getCurrentWeather(coordinates)),
-  getWeather: (coordinates) => dispatch(updateSearchWeather(coordinates))
+  // getWeather: (coordinates) => dispatch(updateSearchWeather(coordinates))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CurrentDirections);
+export default connect(mapStateToProps, null)(CurrentDirections);
