@@ -40,11 +40,4 @@ export const mapStateToProps = (state) => ({
   isLoading: state.isLoading
 });
 
-export const mapDispatchToProps = (dispatch) => ({
-  displayDirections: (origin, departure) => dispatch(getCurrentDirections(origin, departure)),
-  // displayDrivingDirections: (origin, departure) => dispatch(getCurrentDrivingDirections(origin, departure)),
-  getWeather: (coordinates) => dispatch(getCurrentWeather(coordinates)),
-  // getWeather: (coordinates) => dispatch(updateSearchWeather(coordinates))
-});
-
 export default connect(mapStateToProps, null)(CurrentDirections);

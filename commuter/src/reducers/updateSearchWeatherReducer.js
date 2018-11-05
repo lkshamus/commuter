@@ -1,7 +1,7 @@
 const searchWeatherReducer = (state = {}, action) => {
   switch(action.type) {
     case 'UPDATE_WEATHER_SEARCH' :
-      return action.searchWeather;
+      return action.destinationWeather;
     default:
       return state;
   }

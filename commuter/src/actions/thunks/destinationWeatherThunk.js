@@ -1,17 +1,17 @@
 import fetchCall from '../../utilities/fetchCall';
 import * as cleaner from '../../utilities/cleaner';
-import { isLoading, setCurrentWeather } from '../index'
+import { isLoading, updateSearchWeather } from '../index'
 
-export const getCurrentWeather = (city) => {
+export const getDestinationWeather = (city) => {
   return async (dispatch) => {
     dispatch(isLoading(true));
     try {
-      const weather = await fetchCall(cleaner.defaultWeatherByCity);
+      const weather = await fetchCall(cleaner.searchWeatherByCity(city));
       // if (weather === 'failed') {
       //   dispatch(setIsOk(true));
       // }
       dispatch(isLoading(false));
-      return dispatch(setCurrentWeather(weather));
+      return dispatch(updateSearchWeather(weather));
     } catch(error) {
       console.log(error.message)
       // dispatch(setHasErrored(true));
