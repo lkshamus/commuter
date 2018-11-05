@@ -148,7 +148,7 @@ export class SearchDirections extends Component {
 
 export const mapStateToProps = (state) => ({
   directions: state.directions,
-  startWeather: state.test,
+  startWeather: state.startWeather,
   isLoading: state.isLoading
 });
 
