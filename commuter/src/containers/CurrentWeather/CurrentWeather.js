@@ -48,3 +48,10 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, null)(CurrentWeather);
+
+CurrentWeather.propTypes = {
+  currentWeather: PropTypes.object, 
+  destinationWeather: PropTypes.object,
+  isLoading: PropTypes.bool,
+  displayWeather: PropTypes.func,
+};

@@ -42,3 +42,8 @@ export const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, null)(CurrentDirections);
+
+CurrentDirections.propTypes = {
+  directions: PropTypes.object, 
+  isLoading: PropTypes.bool,
+};
