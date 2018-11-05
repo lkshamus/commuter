@@ -1,6 +1,7 @@
 import fetchCall from '../../utilities/fetchCall';
 import * as cleaner from '../../utilities/cleaner';
 import { isLoading, setDirections, setHasFailed, setHasErrored } from '../index'
+import NotFound from '../../components/NotFound'
 
 export const getCurrentDirections = (origin, destination, mode) => {
   return async (dispatch) => {

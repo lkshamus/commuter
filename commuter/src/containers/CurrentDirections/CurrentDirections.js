@@ -15,6 +15,7 @@ import './CurrentDirections.css'
 export class CurrentDirections extends Component {
 
  render () {
+  console.log(this.props.directions)
     try{
        return (
           <div className='display-directions'>

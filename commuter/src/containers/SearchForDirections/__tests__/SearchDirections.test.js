@@ -88,30 +88,6 @@ describe('handleChange', () => {
     expect(spy).toHaveBeenCalledWith(mockEvent);
     });  
 })
-
-describe.skip('handleSubmitSearch', () => {
-  it('should call handleSubmitSearch on submit', () => {
-
-    const mockPreventDefault = jest.fn();
-
-    const mockEvent = {
-      target: {
-        directions: 'Mountain View to San Jose',
-        weather: 'Mountain View is 70 degrees and San Jose is 60'
-      },
-      preventDefault: mockPreventDefault
-    }  
-
-    const wrapper = shallow(<SearchDirections />)
-
-    const spy = spyOn(wrapper.instance(), 'handleChange')
-    wrapper.instance().forceUpdate();
-
-    wrapper.find('button').simulate('click', mockEvent);
-
-    expect(spy).toHaveBeenCalledWith(mockEvent);
-  })
-})
   
 describe('mapDispatchToProps', () => {
   it('calls dispatch with a setDirections action when getCurrentDirections is called', () => {
