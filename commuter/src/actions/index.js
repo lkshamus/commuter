@@ -27,30 +27,9 @@ export const setDirections = (directions) => {
   }
 }
 
-export const updateDirections = (searchedDirections) => {
-  return {
-    type: 'UPDATE_DIRECTIONS',
-  searchedDirections
-  }
-}
-
-// export const setTransitDirections = (directions) => {
+// export const updateDirections = (searchedDirections) => {
 //   return {
-//     type: 'SET_TRANSIT_DIRECTIONS', 
-//     directions
-//   }
-// }
-
-// export const setBikeDirections = (bikeDirections) => {
-//   return {
-//     type: 'SET_BIKE_DIRECTIONS',
-//     bikeDirections
-//   }
-// }
-
-// export const setWalkingDirections = (walkingDirections) => {
-//   return {
-//     type: 'SET_WALKING_DIRECTIONS', 
-//     walkingDirections
+//     type: 'UPDATE_DIRECTIONS',
+//   searchedDirections
 //   }
 // }
