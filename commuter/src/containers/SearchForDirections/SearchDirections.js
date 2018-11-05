@@ -145,3 +145,13 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchDirections);
+
+SearchDirections.propTypes = {
+  directions: PropTypes.object, 
+  currentWeather: PropTypes.object,
+  updateSearchWeather: PropTypes.object,
+  isLoading: PropTypes.bool,
+  getNewDirections: PropTypes.func,
+  displayWeatherStart: PropTypes.func,
+  displayWeatherEnd: PropTypes.func
+};
