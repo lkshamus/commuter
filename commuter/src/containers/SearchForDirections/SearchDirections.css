@@ -64,7 +64,7 @@ li {
 }
 
 label {
-  font: 300 16px/1.7 'Open Sans', sans-serif;
+  font: 300 20px/1.7 'Open Sans', sans-serif;
   color: #666;
   text-align: center;
   cursor: pointer;
@@ -79,7 +79,7 @@ label {
   bottom: 200px;
   left: 950px;
   color: #666;
-  font: 300 16px/1.7 'Open Sans', sans-serif;
+  font: 300 18px/1.7 'Open Sans', sans-serif;
   border: 0;
   width: 90px;
   height: 43px;

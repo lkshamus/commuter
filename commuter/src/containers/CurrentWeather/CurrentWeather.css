@@ -1,3 +1,33 @@
-.weather {
-  display: grid;
+.weather, .start-weather {
+  display: flex
+}
+
+.start-weather {
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.redo {
+  position: relative;
+  background-color: #c4d4e0;
+  top: 350px;
+  right: 600px;
+  color: #666;
+  font: 300 16px/1.7 'Open Sans', sans-serif;
+  border: 0;
+  outline: none;
+  width: 90px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.redo:hover {
+  outline: none;
+  color: #ffffff;
+  background-color: #193446;
+}
+
+.redo:disabled {
+  background: #f1f1f1;
+  color: #666;
 }

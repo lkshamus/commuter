@@ -3,7 +3,7 @@ import searchWeatherReducer from '../updateSearchWeatherReducer';
 
 describe('searchWeatherReducer', () => {
   it('should return the default state', () => {
-    const expected = ''
+    const expected = {}
 
     const result = searchWeatherReducer(undefined, {})
 
@@ -12,14 +12,14 @@ describe('searchWeatherReducer', () => {
 
   it('should return the state when a search is inputed', () => {
     
-    const expected = 'Westminster'
+    const expected = {location: 'Westminster'}
 
     const mockAction = {
       type: 'UPDATE_WEATHER_SEARCH',
-      searchWeather: expected
+      destinationWeather: expected
     }
 
-    const result = searchWeatherReducer(null, mockAction)
+    const result = searchWeatherReducer(expected, mockAction)
 
     expect(result).toEqual(expected)
   })
