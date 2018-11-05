@@ -4,8 +4,6 @@ import searchWeatherReducer from './updateSearchWeatherReducer'
 import currentWeatherReducer from './currentWeatherReducer'
 import searchDirectionsReducer from './searchDirectionsReducer'
 import updateDirectionsReducer from './updateDirectionsReducer'
-// import walkingDirectionsReducer from './walkingDirectionsReducer'
-// import bikeDirectionsReducer from './bikeDirectionsReducer'
 
 export const rootReducer = combineReducers({
   currentWeather: currentWeatherReducer,
@@ -13,7 +11,4 @@ export const rootReducer = combineReducers({
   directions: searchDirectionsReducer,
   isLoading: isLoadingReducer,
   searchedDirections: updateDirectionsReducer,
-//   walkingDirections: walkingDirectionsReducer,
-//   bikeDirections: bikeDirectionsReducer,
-  // directions: transitDirectionsReducer
 })

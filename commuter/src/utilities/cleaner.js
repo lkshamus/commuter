@@ -3,8 +3,13 @@ import {apiKeyWeather, apiKeyMap, gmapApi} from './APIkey.js';
 export const defaultWeatherByCity = `http://api.openweathermap.org/data/2.5/weather?q=denver,US&appid=${apiKeyWeather}`
 
 export const searchWeatherByCity = (coordinates) => {
- const url = `http://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lng}&appid=${apiKeyWeather}`
- return url
+  const url = `http://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lng}&appid=${apiKeyWeather}`
+  return url
+}
+
+export const hourlyWeatherByCity = (coordinates) => {
+  const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lng}&appid=${apiKeyWeather}`
+  return url
 }
 
 export const orignAndDeparture = (origin, destination, mode) => {

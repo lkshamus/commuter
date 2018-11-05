@@ -29,31 +29,31 @@ describe('actions', () => {
     expect(result).toEqual(expected)
   })
 
-  it.skip('should have a type of UPDATE_SEARCH_WEATHER', () => {
+  it('should have a type of UPDATE_WEATHER_SEARCH', () => {
 
-    const searchWeather = {
+    const destinationWeather = {
       location: 'Boulder',
       temp: 80
     }
 
     const expected = {
-      type: 'UPDATE_SEARCH_WEATHER',
-      searchWeather: searchWeather
+      type: 'UPDATE_WEATHER_SEARCH',
+      destinationWeather: destinationWeather
     }
 
-    const result = Actions.updateSearchWeather(searchWeather)
+    const result = Actions.updateSearchWeather(destinationWeather)
 
     expect(result).toEqual(expected)
   })
 
-  it.skip('should have a type of SET_DIRECTIONS', () => {
+  it('should have a type of SET_DIRECTION', () => {
     
     const currentDirections = {
       start: 'Denver', 
       end: 'Boulder'
     }
     const expected = {
-      type: 'SET_DIRECTIONS',
+      type: 'SET_DIRECTION',
       directions: currentDirections
     }
 
@@ -61,4 +61,26 @@ describe('actions', () => {
 
     expect(result).toEqual(expected);
   })
+
+  it('should have a type of SET_HAS_FAILED', () => {
+    
+    const bool = true
+
+    const expected = {"setFailed": true, "type": "SET_HAS_FAILED"}
+
+    const result = Actions.setHasFailed(bool)
+    
+    expect(result).toEqual(expected)
+  })
+  it('should have a type of SET_HAS_ERRORED', () => {
+    
+    const bool = true
+
+    const expected = {"setErrored": true, "type": "SET_HAS_ERRORED"}
+
+    const result = Actions.setHasErrored(bool)
+    
+    expect(result).toEqual(expected)
+  })
+
 })

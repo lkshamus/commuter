@@ -27,6 +27,13 @@ export const setDirections = (directions) => {
   }
 }
 
+export const updateDirections = (directions) => {
+  return {
+    type: 'UPDATE_DIRECTIONS',
+    directions
+  }
+}
+
 export const setHasFailed = (bool) => {
   return {
     type: 'SET_HAS_FAILED',

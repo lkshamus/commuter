@@ -3,7 +3,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { connect } from 'react-redux';
 
-import { getCurrentWeather} from '../../../actions/thunks/currentWeatherThunk'
+import { getDestinationWeather } from '../../../actions/thunks/destinationWeatherThunk'
+import { getCurrentWeather } from '../../../actions/thunks/searchWeatherThunk'
 import { CurrentWeather, mapDispatchToProps, mapStateToProps } from '../CurrentWeather';
 import { setCurrentWeather } from '../../../actions'
 import { updateSearchWeather } from '../../../actions'
@@ -16,16 +17,16 @@ describe('CurrentWeather', () => {
 })
 
 describe('mapDispatchToProps', () => {
-  it('calls dispatch with a updateSearchWeather action when getCurrentDirections is called', () => {
+  it('calls dispatch with a setCurrentWeather action when displayWeather is called', () => {
 
     const currentWeather =  {city: 'Mountain View', temp: 70}
       
     const mockDispatch = jest.fn()
-    const actionToDispatch = updateSearchWeather(currentWeather)
+    const actionToDispatch = setCurrentWeather(currentWeather)
       
     const mappedProps = mapDispatchToProps(mockDispatch)
     mappedProps.displayWeather(currentWeather)
-      
+    
     expect(mockDispatch).toHaveBeenCalled
   })
 })

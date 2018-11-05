@@ -16,35 +16,6 @@ describe('CurrentDirections', () => {
   })
 })
 
-describe('mapDispatchToProps', () => {
-  it('calls dispatch with a setDirections action when getCurrentDirections is called', () => {
-
-    const directions =  {origin: 'Mountain View', destination: 'San Jose'}
-      
-    const mockDispatch = jest.fn()
-    const actionToDispatch = getCurrentDirections(directions)
-      
-    const mappedProps = mapDispatchToProps(mockDispatch)
-    mappedProps.displayDirections(directions)
-      
-    expect(mockDispatch).toHaveBeenCalled
-  })
-
-  it('calls dispatch with a setCurrentWeather action when getCurrentDirections is called', () => {
-
-    const weather =  {city: 'Mountain View', temp: 70}
-      
-    const mockDispatch = jest.fn()
-    const actionToDispatch = updateSearchWeather(weather)
-      
-    const mappedProps = mapDispatchToProps(mockDispatch)
-    mappedProps.getWeather(weather)
-      
-    expect(mockDispatch).toHaveBeenCalled
-  })
-})
-
-
 describe('mapStateToProps', () => {
   it('should map the state to props', () => {
 
