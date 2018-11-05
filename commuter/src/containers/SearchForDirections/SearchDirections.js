@@ -54,6 +54,7 @@ export class SearchDirections extends Component {
   render() {
     return (
       <form
+        className='search-form'
         onSubmit={this.handleSubmitSearch}>
         <input
         placeholder='enter origin' 

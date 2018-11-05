@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/googlemaps": "^3.30.16",
+    "@types/markerclustererplus": "^2.1.33",
+    "ajv": "^6.5.5",
+    "gl-matrix": "^2.8.1",
     "google-maps-react": "^2.0.2",
+    "mapbox-gl": "^0.51.0-beta.2",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",

@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { getCurrentWeather } from '../CurrentWeatherThunk'
-import { isLoading, setHasErrored } from '../../index'
+import { getCurrentWeather } from '../searchWeatherThunk'
+import { isLoading, setHasErrored, setHasFailed } from '../../index'
 
 describe('currentWeatherThunk', () => {
   let mockWeather
@@ -19,8 +19,7 @@ describe('currentWeatherThunk', () => {
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(true))
   })
 
-
-it.skip('should dispatch Error if the response is not ok', async () => {
+it('should dispatch Error if the response is not ok', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve('failed'))
 
     mockDispatch = jest.fn().mockImplementation(() => {
@@ -31,19 +30,17 @@ it.skip('should dispatch Error if the response is not ok', async () => {
 
     await thunk(mockDispatch)
 
-    expect(mockDispatch).toHaveBeenCalledWith(setIsOk(true))
+    expect(mockDispatch).toHaveBeenCalledWith(setHasFailed(true))
   })
 
-it.skip('should dispatch Error(false) if the response is ok', async () => {
+it('should dispatch Error(false) if the response is ok', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true
     }))
 
-    mockDispatch = jest.fn().mockImplementation(() => {
-      return {"movies": {title: 'Mean Girls'}, "type": "SET_MOVIE_LIST"}
-    })
+    mockDispatch = jest.fn()
 
-    const thunk = getMovieList(mockFilter)
+    const thunk = getCurrentWeather(mockWeather)
 
      await thunk(mockDispatch)
 
