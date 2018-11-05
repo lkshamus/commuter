@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { NavLink } from "react-router-dom";
 
 import { getCurrentWeather} from '../../actions/thunks/currentWeatherThunk'
 import { setCurrentWeather } from '../../actions'
 import Loading from '../../components/Loading/index'
+import './CurrentWeather.css'
 
 export class CurrentWeather extends Component {
 
@@ -15,10 +17,11 @@ export class CurrentWeather extends Component {
   render () {
     try{
        return (
-      <div>
-        <h1>Weather in {this.props.currentWeather.name}</h1>
-        <h1>Weather in {Math.round((this.props.currentWeather.main.temp - 273.15) * 9 / 5 + 32)}°F</h1>
-        <h1>Current Conditions: {this.props.currentWeather.weather[0].description}</h1>
+      <div className='weather'>
+        <h3> <span className='text'> Weather in </span> {this.props.currentWeather.name}</h3>
+        <h3> <span className='text'> Weather in </span>{Math.round((this.props.currentWeather.main.temp - 273.15) * 9 / 5 + 32)}°F</h3>
+        <h3> <span className='text'> Current Conditions: </span> {this.props.currentWeather.weather[0].description}</h3>
+        <NavLink to='/'> <button>Redo Search</button></NavLink>
       </div>
     )
     } catch {

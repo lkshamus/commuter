@@ -1,0 +1,22 @@
+.display-directions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  margin: 50px;
+  height: 120px;
+}
+
+.direction-text {
+
+}
+
+h3 {
+  color: #193446;
+  margin: 10px;
+  font: 300 18px/1.7 'Open Sans', sans-serif;
+}
+
+.text {
+  color: #9aabb9;
+  font: 600 20px/1.7 'Open Sans', sans-serif;
+}

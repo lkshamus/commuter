@@ -6,7 +6,9 @@ export const getCurrentDirections = (origin, departure, mode) => {
   return async (dispatch) => {
     dispatch(isLoading(true));
    try {
+      console.log('if', origin, departure, mode)
       const directions = await fetchCall(cleaner.orignAndDeparture(origin, departure, mode));
+      await directions
       // if (weather === 'failed') {
       //   dispatch(setIsOk(true));
       // }
