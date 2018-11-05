@@ -50,14 +50,18 @@ export class SearchDirections extends Component {
 
 
   componentWillUpdate = async () => {
-    let startCoordinates
-    let endCoordinates
+    let startCoordinates = 0
+    let endCoordinates = 0
     await this.props.getNewDirections(this.state.origin, this.state.departure, this.state.mode)
-
     if(this.state.origin && this.state.departure && this.state.mode){
-    startCoordinates = this.props.directions.routes[0].legs[0].start_location 
-    endCoordinates = this.props.directions.routes[0].legs[0].end_location
-    await this.props.displayWeatherStart(startCoordinates)
+      if(this.props.directions.routes[0].legs[0].start_location && this.props.directions.routes[0].legs[0].end_location){
+      startCoordinates = this.props.directions.routes[0].legs[0].start_location   
+      endCoordinates = this.props.directions.routes[0].legs[0].end_location 
+      await this.props.displayWeatherStart(startCoordinates)
+      } else {
+        startCoordinates = 0
+        endCoordinates = 0 
+      }
   }
   }
 
@@ -144,7 +148,7 @@ export class SearchDirections extends Component {
 
 export const mapStateToProps = (state) => ({
   directions: state.directions,
-  startWeather: state.test,
+  startWeather: state.startWeather,
   isLoading: state.isLoading
 });
 

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk'
-import { getCurrentDrivingDirections } from '../../actions/thunks/originAndDepartureThunk'
 import { setDirections } from '../../actions'
 import { getCurrentWeather } from '../../actions/thunks/searchWeatherThunk'
 import { setCurrentWeather } from '../../actions'
@@ -17,7 +16,6 @@ export class CurrentDirections extends Component {
  async componentDidMount() {
   console.log(this.props.directions)
     await this.props.displayDirections(this.props.directions)
-    // await this.props.displayDrivingDirections(this.props.directions.routes)
   }
 
   render () {

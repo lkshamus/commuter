@@ -27,11 +27,3 @@ class App extends Component {
 }
 
 export default App;
-
-
- // <Route
- //          exact path='/directions'
- //          component={CurrentDirections}
- //        />
-
- // <NavLink to='/directions'> 
