@@ -10,10 +10,6 @@ import './CurrentWeather.css'
 
 export class CurrentWeather extends Component {
 
- async componentDidMount() {
-    await this.props.displayWeather(this.props.currentWeather)
-  }
-
   render () {
     try{
        return (
