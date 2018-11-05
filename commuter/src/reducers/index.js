@@ -9,7 +9,7 @@ import updateDirectionsReducer from './updateDirectionsReducer'
 
 export const rootReducer = combineReducers({
   currentWeather: currentWeatherReducer,
-  searchedWeather: searchWeatherReducer,
+  destinationWeather: searchWeatherReducer,
   directions: searchDirectionsReducer,
   isLoading: isLoadingReducer,
   searchedDirections: updateDirectionsReducer,

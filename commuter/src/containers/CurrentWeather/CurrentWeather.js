@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { NavLink } from "react-router-dom";
 
-import { getCurrentWeather} from '../../actions/thunks/currentWeatherThunk'
-import { setCurrentWeather } from '../../actions'
+import { getDestinationWeather } from '../../actions/thunks/destinationWeatherThunk'
+import { getCurrentWeather } from '../../actions/thunks/searchWeatherThunk'
+import { setCurrentWeather, updateSearchWeather } from '../../actions'
 import Loading from '../../components/Loading/index'
 import './CurrentWeather.css'
 
@@ -12,12 +13,21 @@ export class CurrentWeather extends Component {
 
   render () {
     try{
+      console.log(this.props)
        return (
-      <div className='weather'>
-        <h3> <span className='text'> Weather in </span> {this.props.currentWeather.name}</h3>
+        <div>
+      <div className='start-weather'>
+        <h3> <span className='text'> Weather at your origin: </span> {this.props.currentWeather.name}</h3>
         <h3> <span className='text'> Weather in </span>{Math.round((this.props.currentWeather.main.temp - 273.15) * 9 / 5 + 32)}°F</h3>
         <h3> <span className='text'> Current Conditions: </span> {this.props.currentWeather.weather[0].description}</h3>
         <NavLink to='/'> <button>Redo Search</button></NavLink>
+      </div>
+      <div className='weather'>
+        <h3> <span className='text'> Weather at your destination: </span> {this.props.destinationWeather.name}</h3>
+        <h3> <span className='text'> Weather in </span>{Math.round((this.props.destinationWeather.main.temp - 273.15) * 9 / 5 + 32)}°F</h3>
+        <h3> <span className='text'> Current Conditions: </span> {this.props.destinationWeather.weather[0].description}</h3>
+        <NavLink to='/'> <button>Redo Search</button></NavLink>
+      </div>
       </div>
     )
     } catch {
@@ -30,11 +40,13 @@ export class CurrentWeather extends Component {
 
 export const mapStateToProps = (state) => ({
   currentWeather: state.currentWeather,
-  isLoading: state.isLoading
+  destinationWeather: state.destinationWeather,
+  isLoading: state.isLoading,
 });
 
 export const mapDispatchToProps = (dispatch) => ({
   displayWeather: (data) => dispatch(getCurrentWeather(data))
+
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CurrentWeather);
+export default connect(mapStateToProps, null)(CurrentWeather);

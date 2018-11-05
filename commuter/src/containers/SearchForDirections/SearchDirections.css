@@ -6,7 +6,7 @@ form {
   justify-content: center;
 }
 
-.origin, .departure {
+.origin, .destination {
   border-radius: 50px;
   font-size: 16px;
   grid-row: 1 / span 1;
@@ -63,7 +63,7 @@ li {
   background-color: #c4d4e0;
 }
 
-/*label {
+label {
   font: 300 16px/1.7 'Open Sans', sans-serif;
   color: #666;
   text-align: center;
@@ -77,9 +77,8 @@ li {
   position: relative;
   background-color: #c4d4e0;
   bottom: 200px;
-  left: 770px;
+  left: 950px;
   color: #666;
-  grid-row: 1 / span 1;
   font: 300 16px/1.7 'Open Sans', sans-serif;
   border: 0;
   width: 90px;
@@ -97,4 +96,3 @@ li {
   background: #f1f1f1;
   color: #666;
 }
-*/

@@ -12,6 +12,7 @@ import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk
 // import { getCurrentDrivingDirections } from '../../actions/thunks/originAndDepartureThunk'
 import { setDirections, updateDirections } from '../../actions'
 import { getCurrentWeather } from '../../actions/thunks/searchWeatherThunk'
+import { getDestinationWeather } from '../../actions/thunks/destinationWeatherThunk'
 import { setCurrentWeather } from '../../actions'
 import CurrentDirections from '../CurrentDirections/CurrentDirections'
 import Loading from '../../components/Loading/index'
@@ -22,7 +23,7 @@ export class SearchDirections extends Component {
     super()
     this.state = {
       origin: '',
-      departure: '',
+      destination: '',
       mode: ''
     }
   }
@@ -42,10 +43,11 @@ export class SearchDirections extends Component {
   handleSubmitSearch = async (e) => {
     e.preventDefault();
     console.log('test')
-    await this.props.getNewDirections(this.state.origin, this.state.departure, this.state.mode)
+    await this.props.getNewDirections(this.state.origin, this.state.destination, this.state.mode)
     let startCoordinates = this.props.directions.routes[0].legs[0].start_location 
     let endCoordinates = this.props.directions.routes[0].legs[0].end_location
     await this.props.displayWeatherStart(startCoordinates)
+    await this.props.displayWeatherEnd(endCoordinates)
     this.props.history.push('/directions')
   };
 
@@ -61,10 +63,10 @@ export class SearchDirections extends Component {
         onChange={(e) => this.handleChange(e)}
         />
         <input 
-        placeholder='enter departure' 
-        className='departure'
-        name='departure' 
-        value={this.state.departure}
+        placeholder='enter destination' 
+        className='destination'
+        name='destination' 
+        value={this.state.destination}
         onChange={(e) => this.handleChange(e)}       
         />
        <button disabled={!this.state.mode}className='submit-btn'>submit</button>
@@ -130,13 +132,15 @@ export class SearchDirections extends Component {
 
 export const mapStateToProps = (state) => ({
   directions: state.directions,
-  weather: state.weather,
+  currentWeather: state.currentWeather,
+  updateSearchWeather: state.destinationWeather,
   isLoading: state.isLoading
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  getNewDirections: (origin, departure, mode) => dispatch(getCurrentDirections(origin, departure, mode)),
+  getNewDirections: (origin, destination, mode) => dispatch(getCurrentDirections(origin, destination, mode)),
   displayWeatherStart: (city) => dispatch(getCurrentWeather(city)),
+  displayWeatherEnd: (city) => dispatch(getDestinationWeather(city))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchDirections);

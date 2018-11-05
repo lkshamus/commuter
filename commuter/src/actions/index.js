@@ -13,10 +13,10 @@ export const isLoading = (bool) => {
   }
 }
 
-export const updateSearchWeather = (searchWeather) => {
+export const updateSearchWeather = (destinationWeather) => {
   return {
     type: 'UPDATE_WEATHER_SEARCH',
-    searchWeather
+    destinationWeather
   }
 }
 
@@ -24,5 +24,19 @@ export const setDirections = (directions) => {
   return {
     type: 'SET_DIRECTION',
     directions
+  }
+}
+
+export const setHasFailed = (bool) => {
+  return {
+    type: 'SET_HAS_FAILED',
+    setFailed: bool
+  }
+}
+
+export const setHasErrored = (bool) => {
+  return {
+    type: 'SET_HAS_ERRORED',
+    setErrored: bool
   }
 }
