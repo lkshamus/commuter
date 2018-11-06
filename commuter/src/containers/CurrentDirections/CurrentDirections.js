@@ -15,9 +15,14 @@ import './CurrentDirections.css'
 export class CurrentDirections extends Component {
 
  render () {
-  console.log(this.props.directions)
+  console.log(this.props.directions.status)
     try{
-       return (
+        if(this.props.status === 'NOT_FOUND') {
+          return (
+            <h1>not valid inputs</h1>
+          )
+        } else {
+          return (
           <div className='display-directions'>
             <div className='direction-text'>
               <h3> <span className='text'>Starting Address: </span> {this.props.directions.routes[0].legs[0].start_address}</h3>
@@ -28,6 +33,7 @@ export class CurrentDirections extends Component {
             <CurrentWeather />
           </div>
       )
+    }
     } catch {
         return (
           <Loading />

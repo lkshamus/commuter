@@ -16,14 +16,14 @@ export class CurrentWeather extends Component {
        return (
         <div>
       <div className='start-weather'>
-        <h3> <span className='text'> Origin Weather: </span>{this.props.currentWeather.name}</h3>
-        <h3> <span className='text'> Weather in </span>{Math.round((this.props.currentWeather.main.temp - 273.15) * 9 / 5 + 32)}°F</h3>
-        <h3> <span className='text'> Current Conditions: </span>{this.props.currentWeather.weather[0].description}</h3>
+        <h3> <span className='text'> Origin Weather: </span><span class='result'>{this.props.currentWeather.name}</span></h3>
+        <h3> <span className='text'> Weather in </span><span class='result'>{Math.round((this.props.currentWeather.main.temp - 273.15) * 9 / 5 + 32)}°F</span></h3>
+        <h3> <span className='text'> Current Conditions: </span><span class='result'>{this.props.currentWeather.weather[0].description}</span></h3>
       </div>
       <div className='weather'>
-        <h3> <span className='text'> Destination Weather:  </span> {this.props.destinationWeather.city.name}</h3>
-        <h3> <span className='text'> Weather in </span>{Math.round((this.props.destinationWeather.list[0].main.temp - 273.15) * 9 / 5 + 32)}°F</h3>
-        <h3> <span className='text'> Current Conditions:  </span>{this.props.destinationWeather.list[0].weather[0].description}</h3>
+        <h3> <span className='text'> Destination Weather:  </span> <span class='result'>{this.props.destinationWeather.city.name}</span></h3>
+        <h3> <span className='text'> Weather in </span><span class='result'>{Math.round((this.props.destinationWeather.list[0].main.temp - 273.15) * 9 / 5 + 32)}°F</span></h3>
+        <h3> <span className='text'> Current Conditions:  </span><span class='result'>{this.props.destinationWeather.list[0].weather[0].description}</span></h3>
         <NavLink to='/'> <button className='redo'>New Search</button></NavLink>
       </div>
       </div>

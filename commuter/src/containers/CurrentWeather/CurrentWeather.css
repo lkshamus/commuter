@@ -1,11 +1,12 @@
 .weather, .start-weather {
-  display: flex
+  display: flex;
+  justify-content: start;
 }
 
-.start-weather {
+/*.start-weather {
   margin-bottom: 10px;
   margin-right: 20px;
-}
+}*/
 
 .redo {
   position: relative;
@@ -30,4 +31,8 @@
 .redo:disabled {
   background: #f1f1f1;
   color: #666;
+}
+
+.result {
+  display: block;
 }
