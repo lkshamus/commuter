@@ -7,8 +7,9 @@
     "@types/markerclustererplus": "^2.1.33",
     "ajv": "^6.5.5",
     "gl-matrix": "^2.8.1",
-    "google-maps-react": "^2.0.2",
+    "google-maps-react": "file:node_modules/google-maps-react",
     "mapbox-gl": "^0.51.0-beta.2",
+    "pigeon-maps": "^0.11.6",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
@@ -16,6 +17,7 @@
     "react-redux": "^5.1.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.0",
+    "react-yandex-maps": "^3.0.2",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.5",
     "redux-thunk": "^2.3.0"

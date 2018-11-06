@@ -8,7 +8,7 @@ export const getCurrentDirections = (origin, destination, mode) => {
     dispatch(isLoading(true));
    try {
       const directions = await fetchCall(cleaner.orignAndDeparture(origin, destination, mode));
-      if (directions === 'failed') {
+      if (directions.status === 'NOT_FOUND') {
         dispatch(setHasFailed(true));
       }
       dispatch(isLoading(false));

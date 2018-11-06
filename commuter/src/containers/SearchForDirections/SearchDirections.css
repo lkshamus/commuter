@@ -1,5 +1,6 @@
 form {
   height: 400px;
+  padding: 40px;
   display: grid;
   grid-template-rows: 1fr 1fr;
   align-items: center;
@@ -8,6 +9,8 @@ form {
 
 .origin, .destination {
   border-radius: 50px;
+  background-color: #c4d4e0;
+  position: relative;
   font-size: 16px;
   grid-row: 1 / span 1;
   width: 400px;
@@ -17,10 +20,21 @@ form {
   border: .5px solid #c4d4e0;
 }
 
+.origin:hover, .destination:hover {
+  background-color: #ffffff;
+  color: #193446;
+}
 
 ul {
+  position: relative;
+  bottom: 70px;
+  background-image: url('../../utilities/images/clouds.svg'); 
+  background-size: 200px;
+  background-position: 0px 40px;
+  background-repeat: no-repeat;
   display: flex;
-  width: 200px;
+  height: 420px;
+  width: 400px;
   text-align: center;
   justify-content: center;
   list-style: none;
@@ -37,7 +51,7 @@ li {
   display: inline-block;
   position: relative;
   color: #666;
-  top: 10px;
+  bottom: 10px;
   height: 30px;
   width: 30px;
   border: 0;
@@ -69,19 +83,25 @@ label {
   text-align: center;
   cursor: pointer;
   position: relative;
-  right: 150px;
+  left: 310px;
   bottom: 50px;
 } 
+
+label:hover {
+  color: #193446;
+  font-weight: 200;
+}
 
 .submit-btn {
   position: relative;
   background-color: #c4d4e0;
-  bottom: 200px;
-  left: 950px;
+  top: 300px;
+  left: 315px;
   color: #666;
   font: 300 18px/1.7 'Open Sans', sans-serif;
   border: 0;
-  width: 90px;
+  width: 305px;
+  outline: none;
   height: 43px;
   border-radius: 50px;
 }
@@ -95,4 +115,16 @@ label {
 .submit-btn:disabled {
   background: #f1f1f1;
   color: #666;
+}
+
+.error {
+  position: relative;
+  color: red;
+  right: 250px;
+  font-size: 20px;
+  opacity: 0;
+}
+
+.Not-valid {
+  opacity: 1;
 }

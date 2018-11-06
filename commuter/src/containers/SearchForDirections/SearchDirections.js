@@ -24,7 +24,8 @@ export class SearchDirections extends Component {
     this.state = {
       origin: '',
       destination: '',
-      mode: ''
+      mode: '',
+      userwarning: ''
     }
   }
 
@@ -40,15 +41,33 @@ export class SearchDirections extends Component {
   });
 }
 
+  removeWarning = () => {
+    this.setState({
+      userwarning: '',
+    })
+  };
+
+  userWarning = async () => {
+    await this.setState({
+      userwarning: 'Not-valid'
+    })
+    await setTimeout(this.removeWarning, 5000)
+  };
+
   handleSubmitSearch = async (e) => {
     e.preventDefault();
-    console.log('test')
     await this.props.getNewDirections(this.state.origin, this.state.destination, this.state.mode)
-    let startCoordinates = this.props.directions.routes[0].legs[0].start_location 
-    let endCoordinates = this.props.directions.routes[0].legs[0].end_location
-    await this.props.displayWeatherStart(startCoordinates)
-    await this.props.displayWeatherEnd(endCoordinates)
-    this.props.history.push('/directions')
+    if(this.props.directions.status !== 'NOT_FOUND' && this.state.origin !== '' && this.state.destination !== '') {
+      let startCoordinates = this.props.directions.routes[0].legs[0].start_location 
+      let endCoordinates = this.props.directions.routes[0].legs[0].end_location
+      await this.props.displayWeatherStart(startCoordinates)
+      await this.props.displayWeatherEnd(endCoordinates)
+      this.props.history.push('/directions')
+    } else {
+      this.userWarning()
+      console.log('oops')
+    }
+
   };
 
   render() {
@@ -71,6 +90,7 @@ export class SearchDirections extends Component {
         onChange={(e) => this.handleChange(e)}       
         />
        <button disabled={!this.state.mode}className='submit-btn'>submit</button>
+        <p className={`error ${this.state.userwarning}`}> no route found </p>
         <ul>
           <li>
             <label>
