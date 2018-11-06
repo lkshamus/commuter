@@ -31,11 +31,10 @@ export class CurrentDirections extends Component {
             </div>  
             <CurrentWeather />
             <div>
-              <img src={`https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\ &markers=size:mid%7Ccolor:red%7C${startLat}, ${startLng}%7C${endLat}, ${endLng}&key=${gmapApi}`}/>
-            
+              <img src={`https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\ &markers=size:mid%7Ccolor:green%7C${startLat}, ${startLng}%7C&markers=size:mid%7Ccolor:red%7C${endLat}, ${endLng}&key=${gmapApi}`}/>
             </div>
           </div>
-      )
+        )
     } catch {
         return (
           <Loading />

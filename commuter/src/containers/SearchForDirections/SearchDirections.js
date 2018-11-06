@@ -56,9 +56,8 @@ export class SearchDirections extends Component {
 
   handleSubmitSearch = async (e) => {
     e.preventDefault();
-    console.log('test')
     await this.props.getNewDirections(this.state.origin, this.state.destination, this.state.mode)
-    if(this.props.directions.status !== 'NOT_FOUND') {
+    if(this.props.directions.status !== 'NOT_FOUND' && this.state.origin !== '' && this.state.destination !== '') {
       let startCoordinates = this.props.directions.routes[0].legs[0].start_location 
       let endCoordinates = this.props.directions.routes[0].legs[0].end_location
       await this.props.displayWeatherStart(startCoordinates)
