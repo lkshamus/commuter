@@ -1,0 +1,18 @@
+h3 {
+  text-align: center;
+}
+
+.error-btn {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c4d4e0;
+  color: #666;
+  font: 300 18px/1.7 'Open Sans', sans-serif;
+  border: 0;
+  width: 305px;
+  outline: none;
+  height: 43px;
+  border-radius: 50px;
+}

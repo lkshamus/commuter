@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { NavLink } from "react-router-dom";
-import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router'
-import { Route } from 'react-router-dom';
-import { Redirect } from 'react-router-dom'
 
 import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk'
 import { setDirections, updateDirections } from '../../actions'

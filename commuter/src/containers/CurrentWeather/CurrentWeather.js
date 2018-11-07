@@ -3,9 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { NavLink } from "react-router-dom";
 
-import { getDestinationWeather } from '../../actions/thunks/destinationWeatherThunk'
 import { getCurrentWeather } from '../../actions/thunks/searchWeatherThunk'
-import { setCurrentWeather, updateSearchWeather } from '../../actions'
 import Loading from '../../components/Loading/index'
 import './CurrentWeather.css'
 
@@ -24,7 +22,7 @@ export class CurrentWeather extends Component {
               <h3 className='directions-weather'> <span className='text'> Origin weather: </span><span className='result'>{Math.round((this.props.currentWeather.main.temp - 273.15) * 9 / 5 + 32)}°F</span></h3>
               <h3 className='directions-weather'> <span className='text'> Current Conditions: </span>
                 <span className='result'>{this.props.currentWeather.weather[0].description}
-                <img className='icon' src={`http://openweathermap.org/img/w/${weatherIconOrigin}.png`}/>
+                <img alt='weather-icon' className='icon' src={`http://openweathermap.org/img/w/${weatherIconOrigin}.png`}/>
                 </span>
               </h3>
             </div>
@@ -32,7 +30,7 @@ export class CurrentWeather extends Component {
               <h3 className='directions-weather'> <span className='text'> Destination weather: </span><span className='result'>{Math.round((this.props.destinationWeather.list[0].main.temp - 273.15) * 9 / 5 + 32)}°F</span></h3>
               <h3 className='directions-weather'> <span className='text'> Current Conditions:  </span>
                 <span className='result'>{this.props.destinationWeather.list[0].weather[0].description}
-                <img className='icon' src={`http://openweathermap.org/img/w/${weatherIconDestination}.png`}/></span></h3>
+                <img alt='weather-icon' className='icon' src={`http://openweathermap.org/img/w/${weatherIconDestination}.png`}/></span></h3>
             </div>
             <div className='new-search-btn'>  
               <NavLink to='/'> <button className='redo'>New Search</button></NavLink>
