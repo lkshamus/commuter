@@ -1,23 +1,32 @@
-.weather, .start-weather {
+.weather-section {
+  display: grid;
   display: flex;
-  justify-content: start;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+/*  border: solid 1px;
+  border-radius: 5%;*/
 }
 
-/*.start-weather {
-  margin-bottom: 10px;
-  margin-right: 20px;
-}*/
+.weather-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather, .start-weather {
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
 
 .redo {
-  position: relative;
   background-color: #c4d4e0;
-  top: 350px;
-  right: 600px;
   color: #666;
   font: 300 16px/1.7 'Open Sans', sans-serif;
   border: 0;
   outline: none;
-  width: 90px;
+  width: 100px;
+  padding: 5px;
   height: 50px;
   border-radius: 50px;
 }
@@ -28,11 +37,11 @@
   background-color: #193446;
 }
 
-.redo:disabled {
-  background: #f1f1f1;
-  color: #666;
-}
-
 .result {
   display: block;
+}
+
+.new-search-btn { 
+  margin-left: 200px;
+  margin-bottom: 100px;
 }

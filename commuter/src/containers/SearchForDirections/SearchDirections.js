@@ -7,9 +7,7 @@ import { withRouter } from 'react-router'
 import { Route } from 'react-router-dom';
 import { Redirect } from 'react-router-dom'
 
-// import { updateSearchWeather } from '../../actions'
 import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk'
-// import { getCurrentDrivingDirections } from '../../actions/thunks/originAndDepartureThunk'
 import { setDirections, updateDirections } from '../../actions'
 import { getCurrentWeather } from '../../actions/thunks/searchWeatherThunk'
 import { getDestinationWeather } from '../../actions/thunks/destinationWeatherThunk'
