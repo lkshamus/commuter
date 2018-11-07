@@ -103,7 +103,8 @@ h2 {
 .starting-address {
   display: grid;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 10px;
+  width: 150px;
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
 }
@@ -111,7 +112,8 @@ h2 {
 .ending-address {
   display: grid;
   justify-content: center;
-  margin-top: 100px;
+   margin-top: 10px;
+  width: 150px;
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
 }
@@ -123,7 +125,11 @@ h2 {
 
 .directions {
   position: relative;
-  left: 220px;
+  left: 150px;
+}
+
+.mapping {
+  right: 160px;
 }
 }
 
@@ -132,6 +138,33 @@ h2 {
 .directions {
   position: relative;
   left: 120px;
+}
+.starting-address {
+  display: grid;
+  justify-content: center;
+  width: 150px;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.ending-address {
+  display: grid;
+  justify-content: center;
+  width: 150px;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+}
+
+
+@media (max-width: 526px) {
+
+.mapping {
+  left: -210px;
+}
+
+h2 {
+  left: 130px;
 }
 }
 
@@ -150,19 +183,32 @@ h2 {
 @media (max-width: 459px) {
 
 .mapping {
-  right: 140px;
+  left: -250px;
 }
 
+.directions {
+  position: relative;
+  left: 80px;
+}
+
+h2 {
+  left: 100px;
+}
 }
 
 @media (max-width: 430px) {
 
 .mapping {
-  right: 160px;
+  left: -280px;
 }
 
 h2 {
-  left: 120px;
+  left: 80px;
 }
+
+.directions {
+  left: 70px;
+}
+
 
 }
