@@ -8,10 +8,12 @@ import { CurrentDirections, mapDispatchToProps, mapStateToProps } from '../Curre
 import { setDirections } from '../../../actions'
 import { setCurrentWeather } from '../../../actions'
 import { updateSearchWeather } from '../../../actions'
+import { directions } from './__mocks__/mockData'
 
 describe('CurrentDirections', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<CurrentDirections />)
+
+    const wrapper = shallow(<CurrentDirections directions={directions} />)
     expect(wrapper).toMatchSnapshot();
   })
 })

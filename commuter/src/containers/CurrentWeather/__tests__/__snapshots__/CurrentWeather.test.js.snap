@@ -3,7 +3,69 @@
 exports[`CurrentWeather should match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <CurrentWeather />,
+  Symbol(enzyme.__unrendered__): <CurrentWeather
+    currentWeather={
+      Object {
+        "base": "stations",
+        "coord": Object {
+          "lat": -16.92,
+          "lon": 145.77,
+        },
+        "main": Object {
+          "humidity": 74,
+          "pressure": 1007,
+          "temp": 300.15,
+          "temp_max": 300.15,
+          "temp_min": 300.15,
+        },
+        "weather": Array [
+          Object {
+            "description": "scattered clouds",
+            "icon": "03n",
+            "id": 802,
+            "main": "Clouds",
+          },
+        ],
+      }
+    }
+    destinationWeather={
+      Object {
+        "cnt": 40,
+        "cod": "200",
+        "list": Array [
+          Object {
+            "clouds": Object {
+              "all": 8,
+            },
+            "dt": 1485799200,
+            "dt_txt": "2017-01-30 18:00:00",
+            "main": Object {
+              "temp": 261.45,
+              "temp_max": 261.45,
+              "temp_min": 259.086,
+            },
+            "snow": Object {},
+            "sys": Object {
+              "pod": "n",
+            },
+            "weather": Array [
+              Object {
+                "description": "clear sky",
+                "icon": "02n",
+                "id": 800,
+                "main": "Clear",
+              },
+            ],
+            "wind": Object {
+              "deg": 232.505,
+              "speed": 4.77,
+            },
+          },
+        ],
+        "message": 0.0036,
+      }
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -15,21 +77,1313 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
-    "props": Object {},
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="weather-section"
+      >
+        <h2
+          className="weather-header"
+        >
+          Weather
+        </h2>
+        <div
+          className="start-weather"
+        >
+          <h3
+            className="directions-weather"
+          >
+             
+            <span
+              className="text"
+            >
+               Origin weather: 
+            </span>
+            <span
+              className="result"
+            >
+              81
+              °F
+            </span>
+          </h3>
+          <h3
+            className="directions-weather"
+          >
+             
+            <span
+              className="text"
+            >
+               Current Conditions: 
+            </span>
+            <span
+              className="result"
+            >
+              scattered clouds
+              <img
+                className="icon"
+                src="http://openweathermap.org/img/w/03n.png"
+              />
+            </span>
+          </h3>
+        </div>
+        <div
+          className="weather"
+        >
+          <h3
+            className="directions-weather"
+          >
+             
+            <span
+              className="text"
+            >
+               Destination weather: 
+            </span>
+            <span
+              className="result"
+            >
+              11
+              °F
+            </span>
+          </h3>
+          <h3
+            className="directions-weather"
+          >
+             
+            <span
+              className="text"
+            >
+               Current Conditions:  
+            </span>
+            <span
+              className="result"
+            >
+              clear sky
+              <img
+                className="icon"
+                src="http://openweathermap.org/img/w/02n.png"
+              />
+            </span>
+          </h3>
+        </div>
+        <div
+          className="new-search-btn"
+        >
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            to="/"
+          >
+             
+            <button
+              className="redo"
+            >
+              New Search
+            </button>
+          </NavLink>
+        </div>
+      </div>,
+      "className": "weather-box",
+    },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="weather-header"
+          >
+            Weather
+          </h2>,
+          <div
+            className="start-weather"
+          >
+            <h3
+              className="directions-weather"
+            >
+               
+              <span
+                className="text"
+              >
+                 Origin weather: 
+              </span>
+              <span
+                className="result"
+              >
+                81
+                °F
+              </span>
+            </h3>
+            <h3
+              className="directions-weather"
+            >
+               
+              <span
+                className="text"
+              >
+                 Current Conditions: 
+              </span>
+              <span
+                className="result"
+              >
+                scattered clouds
+                <img
+                  className="icon"
+                  src="http://openweathermap.org/img/w/03n.png"
+                />
+              </span>
+            </h3>
+          </div>,
+          <div
+            className="weather"
+          >
+            <h3
+              className="directions-weather"
+            >
+               
+              <span
+                className="text"
+              >
+                 Destination weather: 
+              </span>
+              <span
+                className="result"
+              >
+                11
+                °F
+              </span>
+            </h3>
+            <h3
+              className="directions-weather"
+            >
+               
+              <span
+                className="text"
+              >
+                 Current Conditions:  
+              </span>
+              <span
+                className="result"
+              >
+                clear sky
+                <img
+                  className="icon"
+                  src="http://openweathermap.org/img/w/02n.png"
+                />
+              </span>
+            </h3>
+          </div>,
+          <div
+            className="new-search-btn"
+          >
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/"
+            >
+               
+              <button
+                className="redo"
+              >
+                New Search
+              </button>
+            </NavLink>
+          </div>,
+        ],
+        "className": "weather-section",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Weather",
+            "className": "weather-header",
+          },
+          "ref": null,
+          "rendered": "Weather",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="directions-weather"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Origin weather: 
+                </span>
+                <span
+                  className="result"
+                >
+                  81
+                  °F
+                </span>
+              </h3>,
+              <h3
+                className="directions-weather"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Current Conditions: 
+                </span>
+                <span
+                  className="result"
+                >
+                  scattered clouds
+                  <img
+                    className="icon"
+                    src="http://openweathermap.org/img/w/03n.png"
+                  />
+                </span>
+              </h3>,
+            ],
+            "className": "start-weather",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  <span
+                    className="text"
+                  >
+                     Origin weather: 
+                  </span>,
+                  <span
+                    className="result"
+                  >
+                    81
+                    °F
+                  </span>,
+                ],
+                "className": "directions-weather",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Origin weather: ",
+                    "className": "text",
+                  },
+                  "ref": null,
+                  "rendered": " Origin weather: ",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      81,
+                      "°F",
+                    ],
+                    "className": "result",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    81,
+                    "°F",
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  <span
+                    className="text"
+                  >
+                     Current Conditions: 
+                  </span>,
+                  <span
+                    className="result"
+                  >
+                    scattered clouds
+                    <img
+                      className="icon"
+                      src="http://openweathermap.org/img/w/03n.png"
+                    />
+                  </span>,
+                ],
+                "className": "directions-weather",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Current Conditions: ",
+                    "className": "text",
+                  },
+                  "ref": null,
+                  "rendered": " Current Conditions: ",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "scattered clouds",
+                      <img
+                        className="icon"
+                        src="http://openweathermap.org/img/w/03n.png"
+                      />,
+                    ],
+                    "className": "result",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "scattered clouds",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "icon",
+                        "src": "http://openweathermap.org/img/w/03n.png",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="directions-weather"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Destination weather: 
+                </span>
+                <span
+                  className="result"
+                >
+                  11
+                  °F
+                </span>
+              </h3>,
+              <h3
+                className="directions-weather"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Current Conditions:  
+                </span>
+                <span
+                  className="result"
+                >
+                  clear sky
+                  <img
+                    className="icon"
+                    src="http://openweathermap.org/img/w/02n.png"
+                  />
+                </span>
+              </h3>,
+            ],
+            "className": "weather",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  <span
+                    className="text"
+                  >
+                     Destination weather: 
+                  </span>,
+                  <span
+                    className="result"
+                  >
+                    11
+                    °F
+                  </span>,
+                ],
+                "className": "directions-weather",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Destination weather: ",
+                    "className": "text",
+                  },
+                  "ref": null,
+                  "rendered": " Destination weather: ",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      11,
+                      "°F",
+                    ],
+                    "className": "result",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    11,
+                    "°F",
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  <span
+                    className="text"
+                  >
+                     Current Conditions:  
+                  </span>,
+                  <span
+                    className="result"
+                  >
+                    clear sky
+                    <img
+                      className="icon"
+                      src="http://openweathermap.org/img/w/02n.png"
+                    />
+                  </span>,
+                ],
+                "className": "directions-weather",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Current Conditions:  ",
+                    "className": "text",
+                  },
+                  "ref": null,
+                  "rendered": " Current Conditions:  ",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "clear sky",
+                      <img
+                        className="icon"
+                        src="http://openweathermap.org/img/w/02n.png"
+                      />,
+                    ],
+                    "className": "result",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "clear sky",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "icon",
+                        "src": "http://openweathermap.org/img/w/02n.png",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/"
+            >
+               
+              <button
+                className="redo"
+              >
+                New Search
+              </button>
+            </NavLink>,
+            "className": "new-search-btn",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": Array [
+                " ",
+                <button
+                  className="redo"
+                >
+                  New Search
+                </button>,
+              ],
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": Array [
+              " ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "New Search",
+                  "className": "redo",
+                },
+                "ref": null,
+                "rendered": "New Search",
+                "type": "button",
+              },
+            ],
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
-      "props": Object {},
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="weather-section"
+        >
+          <h2
+            className="weather-header"
+          >
+            Weather
+          </h2>
+          <div
+            className="start-weather"
+          >
+            <h3
+              className="directions-weather"
+            >
+               
+              <span
+                className="text"
+              >
+                 Origin weather: 
+              </span>
+              <span
+                className="result"
+              >
+                81
+                °F
+              </span>
+            </h3>
+            <h3
+              className="directions-weather"
+            >
+               
+              <span
+                className="text"
+              >
+                 Current Conditions: 
+              </span>
+              <span
+                className="result"
+              >
+                scattered clouds
+                <img
+                  className="icon"
+                  src="http://openweathermap.org/img/w/03n.png"
+                />
+              </span>
+            </h3>
+          </div>
+          <div
+            className="weather"
+          >
+            <h3
+              className="directions-weather"
+            >
+               
+              <span
+                className="text"
+              >
+                 Destination weather: 
+              </span>
+              <span
+                className="result"
+              >
+                11
+                °F
+              </span>
+            </h3>
+            <h3
+              className="directions-weather"
+            >
+               
+              <span
+                className="text"
+              >
+                 Current Conditions:  
+              </span>
+              <span
+                className="result"
+              >
+                clear sky
+                <img
+                  className="icon"
+                  src="http://openweathermap.org/img/w/02n.png"
+                />
+              </span>
+            </h3>
+          </div>
+          <div
+            className="new-search-btn"
+          >
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/"
+            >
+               
+              <button
+                className="redo"
+              >
+                New Search
+              </button>
+            </NavLink>
+          </div>
+        </div>,
+        "className": "weather-box",
+      },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2
+              className="weather-header"
+            >
+              Weather
+            </h2>,
+            <div
+              className="start-weather"
+            >
+              <h3
+                className="directions-weather"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Origin weather: 
+                </span>
+                <span
+                  className="result"
+                >
+                  81
+                  °F
+                </span>
+              </h3>
+              <h3
+                className="directions-weather"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Current Conditions: 
+                </span>
+                <span
+                  className="result"
+                >
+                  scattered clouds
+                  <img
+                    className="icon"
+                    src="http://openweathermap.org/img/w/03n.png"
+                  />
+                </span>
+              </h3>
+            </div>,
+            <div
+              className="weather"
+            >
+              <h3
+                className="directions-weather"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Destination weather: 
+                </span>
+                <span
+                  className="result"
+                >
+                  11
+                  °F
+                </span>
+              </h3>
+              <h3
+                className="directions-weather"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Current Conditions:  
+                </span>
+                <span
+                  className="result"
+                >
+                  clear sky
+                  <img
+                    className="icon"
+                    src="http://openweathermap.org/img/w/02n.png"
+                  />
+                </span>
+              </h3>
+            </div>,
+            <div
+              className="new-search-btn"
+            >
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/"
+              >
+                 
+                <button
+                  className="redo"
+                >
+                  New Search
+                </button>
+              </NavLink>
+            </div>,
+          ],
+          "className": "weather-section",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Weather",
+              "className": "weather-header",
+            },
+            "ref": null,
+            "rendered": "Weather",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="directions-weather"
+                >
+                   
+                  <span
+                    className="text"
+                  >
+                     Origin weather: 
+                  </span>
+                  <span
+                    className="result"
+                  >
+                    81
+                    °F
+                  </span>
+                </h3>,
+                <h3
+                  className="directions-weather"
+                >
+                   
+                  <span
+                    className="text"
+                  >
+                     Current Conditions: 
+                  </span>
+                  <span
+                    className="result"
+                  >
+                    scattered clouds
+                    <img
+                      className="icon"
+                      src="http://openweathermap.org/img/w/03n.png"
+                    />
+                  </span>
+                </h3>,
+              ],
+              "className": "start-weather",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    <span
+                      className="text"
+                    >
+                       Origin weather: 
+                    </span>,
+                    <span
+                      className="result"
+                    >
+                      81
+                      °F
+                    </span>,
+                  ],
+                  "className": "directions-weather",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Origin weather: ",
+                      "className": "text",
+                    },
+                    "ref": null,
+                    "rendered": " Origin weather: ",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        81,
+                        "°F",
+                      ],
+                      "className": "result",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      81,
+                      "°F",
+                    ],
+                    "type": "span",
+                  },
+                ],
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    <span
+                      className="text"
+                    >
+                       Current Conditions: 
+                    </span>,
+                    <span
+                      className="result"
+                    >
+                      scattered clouds
+                      <img
+                        className="icon"
+                        src="http://openweathermap.org/img/w/03n.png"
+                      />
+                    </span>,
+                  ],
+                  "className": "directions-weather",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Current Conditions: ",
+                      "className": "text",
+                    },
+                    "ref": null,
+                    "rendered": " Current Conditions: ",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "scattered clouds",
+                        <img
+                          className="icon"
+                          src="http://openweathermap.org/img/w/03n.png"
+                        />,
+                      ],
+                      "className": "result",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "scattered clouds",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "icon",
+                          "src": "http://openweathermap.org/img/w/03n.png",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                    ],
+                    "type": "span",
+                  },
+                ],
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="directions-weather"
+                >
+                   
+                  <span
+                    className="text"
+                  >
+                     Destination weather: 
+                  </span>
+                  <span
+                    className="result"
+                  >
+                    11
+                    °F
+                  </span>
+                </h3>,
+                <h3
+                  className="directions-weather"
+                >
+                   
+                  <span
+                    className="text"
+                  >
+                     Current Conditions:  
+                  </span>
+                  <span
+                    className="result"
+                  >
+                    clear sky
+                    <img
+                      className="icon"
+                      src="http://openweathermap.org/img/w/02n.png"
+                    />
+                  </span>
+                </h3>,
+              ],
+              "className": "weather",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    <span
+                      className="text"
+                    >
+                       Destination weather: 
+                    </span>,
+                    <span
+                      className="result"
+                    >
+                      11
+                      °F
+                    </span>,
+                  ],
+                  "className": "directions-weather",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Destination weather: ",
+                      "className": "text",
+                    },
+                    "ref": null,
+                    "rendered": " Destination weather: ",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        11,
+                        "°F",
+                      ],
+                      "className": "result",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      11,
+                      "°F",
+                    ],
+                    "type": "span",
+                  },
+                ],
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    <span
+                      className="text"
+                    >
+                       Current Conditions:  
+                    </span>,
+                    <span
+                      className="result"
+                    >
+                      clear sky
+                      <img
+                        className="icon"
+                        src="http://openweathermap.org/img/w/02n.png"
+                      />
+                    </span>,
+                  ],
+                  "className": "directions-weather",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Current Conditions:  ",
+                      "className": "text",
+                    },
+                    "ref": null,
+                    "rendered": " Current Conditions:  ",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "clear sky",
+                        <img
+                          className="icon"
+                          src="http://openweathermap.org/img/w/02n.png"
+                        />,
+                      ],
+                      "className": "result",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "clear sky",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "icon",
+                          "src": "http://openweathermap.org/img/w/02n.png",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "img",
+                      },
+                    ],
+                    "type": "span",
+                  },
+                ],
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/"
+              >
+                 
+                <button
+                  className="redo"
+                >
+                  New Search
+                </button>
+              </NavLink>,
+              "className": "new-search-btn",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": Array [
+                  " ",
+                  <button
+                    className="redo"
+                  >
+                    New Search
+                  </button>,
+                ],
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "New Search",
+                    "className": "redo",
+                  },
+                  "ref": null,
+                  "rendered": "New Search",
+                  "type": "button",
+                },
+              ],
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

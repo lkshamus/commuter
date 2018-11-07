@@ -38,6 +38,11 @@ ShallowWrapper {
         >
           submit
         </button>,
+        <p
+          className="error "
+        >
+           no route found 
+        </p>,
         <ul>
           <li>
             <label>
@@ -140,6 +145,18 @@ ShallowWrapper {
         "ref": null,
         "rendered": "submit",
         "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": " no route found ",
+          "className": "error ",
+        },
+        "ref": null,
+        "rendered": " no route found ",
+        "type": "p",
       },
       Object {
         "instance": null,
@@ -472,6 +489,11 @@ ShallowWrapper {
           >
             submit
           </button>,
+          <p
+            className="error "
+          >
+             no route found 
+          </p>,
           <ul>
             <li>
               <label>
@@ -574,6 +596,18 @@ ShallowWrapper {
           "ref": null,
           "rendered": "submit",
           "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " no route found ",
+            "className": "error ",
+          },
+          "ref": null,
+          "rendered": " no route found ",
+          "type": "p",
         },
         Object {
           "instance": null,
