@@ -4,7 +4,7 @@ import './NotFound.css'
 const NotFound = () => {
   return(
   <div>
-    <h3>the page you are requesting is not found</h3>
+    <h3 className='error-text'>the page you are requesting is not found</h3>
     <Link to='/'><button className='error-btn'> go back home</button> </Link>
   </div>
   );

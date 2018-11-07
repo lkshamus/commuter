@@ -120,6 +120,7 @@ ShallowWrapper {
             >
               scattered clouds
               <img
+                alt="weather-icon"
                 className="icon"
                 src="http://openweathermap.org/img/w/03n.png"
               />
@@ -159,6 +160,7 @@ ShallowWrapper {
             >
               clear sky
               <img
+                alt="weather-icon"
                 className="icon"
                 src="http://openweathermap.org/img/w/02n.png"
               />
@@ -229,6 +231,7 @@ ShallowWrapper {
               >
                 scattered clouds
                 <img
+                  alt="weather-icon"
                   className="icon"
                   src="http://openweathermap.org/img/w/03n.png"
                 />
@@ -268,6 +271,7 @@ ShallowWrapper {
               >
                 clear sky
                 <img
+                  alt="weather-icon"
                   className="icon"
                   src="http://openweathermap.org/img/w/02n.png"
                 />
@@ -343,6 +347,7 @@ ShallowWrapper {
                 >
                   scattered clouds
                   <img
+                    alt="weather-icon"
                     className="icon"
                     src="http://openweathermap.org/img/w/03n.png"
                   />
@@ -427,6 +432,7 @@ ShallowWrapper {
                   >
                     scattered clouds
                     <img
+                      alt="weather-icon"
                       className="icon"
                       src="http://openweathermap.org/img/w/03n.png"
                     />
@@ -457,6 +463,7 @@ ShallowWrapper {
                     "children": Array [
                       "scattered clouds",
                       <img
+                        alt="weather-icon"
                         className="icon"
                         src="http://openweathermap.org/img/w/03n.png"
                       />,
@@ -471,6 +478,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
+                        "alt": "weather-icon",
                         "className": "icon",
                         "src": "http://openweathermap.org/img/w/03n.png",
                       },
@@ -523,6 +531,7 @@ ShallowWrapper {
                 >
                   clear sky
                   <img
+                    alt="weather-icon"
                     className="icon"
                     src="http://openweathermap.org/img/w/02n.png"
                   />
@@ -607,6 +616,7 @@ ShallowWrapper {
                   >
                     clear sky
                     <img
+                      alt="weather-icon"
                       className="icon"
                       src="http://openweathermap.org/img/w/02n.png"
                     />
@@ -637,6 +647,7 @@ ShallowWrapper {
                     "children": Array [
                       "clear sky",
                       <img
+                        alt="weather-icon"
                         className="icon"
                         src="http://openweathermap.org/img/w/02n.png"
                       />,
@@ -651,6 +662,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
+                        "alt": "weather-icon",
                         "className": "icon",
                         "src": "http://openweathermap.org/img/w/02n.png",
                       },
@@ -776,6 +788,7 @@ ShallowWrapper {
               >
                 scattered clouds
                 <img
+                  alt="weather-icon"
                   className="icon"
                   src="http://openweathermap.org/img/w/03n.png"
                 />
@@ -815,6 +828,7 @@ ShallowWrapper {
               >
                 clear sky
                 <img
+                  alt="weather-icon"
                   className="icon"
                   src="http://openweathermap.org/img/w/02n.png"
                 />
@@ -885,6 +899,7 @@ ShallowWrapper {
                 >
                   scattered clouds
                   <img
+                    alt="weather-icon"
                     className="icon"
                     src="http://openweathermap.org/img/w/03n.png"
                   />
@@ -924,6 +939,7 @@ ShallowWrapper {
                 >
                   clear sky
                   <img
+                    alt="weather-icon"
                     className="icon"
                     src="http://openweathermap.org/img/w/02n.png"
                   />
@@ -999,6 +1015,7 @@ ShallowWrapper {
                   >
                     scattered clouds
                     <img
+                      alt="weather-icon"
                       className="icon"
                       src="http://openweathermap.org/img/w/03n.png"
                     />
@@ -1083,6 +1100,7 @@ ShallowWrapper {
                     >
                       scattered clouds
                       <img
+                        alt="weather-icon"
                         className="icon"
                         src="http://openweathermap.org/img/w/03n.png"
                       />
@@ -1113,6 +1131,7 @@ ShallowWrapper {
                       "children": Array [
                         "scattered clouds",
                         <img
+                          alt="weather-icon"
                           className="icon"
                           src="http://openweathermap.org/img/w/03n.png"
                         />,
@@ -1127,6 +1146,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
+                          "alt": "weather-icon",
                           "className": "icon",
                           "src": "http://openweathermap.org/img/w/03n.png",
                         },
@@ -1179,6 +1199,7 @@ ShallowWrapper {
                   >
                     clear sky
                     <img
+                      alt="weather-icon"
                       className="icon"
                       src="http://openweathermap.org/img/w/02n.png"
                     />
@@ -1263,6 +1284,7 @@ ShallowWrapper {
                     >
                       clear sky
                       <img
+                        alt="weather-icon"
                         className="icon"
                         src="http://openweathermap.org/img/w/02n.png"
                       />
@@ -1293,6 +1315,7 @@ ShallowWrapper {
                       "children": Array [
                         "clear sky",
                         <img
+                          alt="weather-icon"
                           className="icon"
                           src="http://openweathermap.org/img/w/02n.png"
                         />,
@@ -1307,6 +1330,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
+                          "alt": "weather-icon",
                           "className": "icon",
                           "src": "http://openweathermap.org/img/w/02n.png",
                         },
