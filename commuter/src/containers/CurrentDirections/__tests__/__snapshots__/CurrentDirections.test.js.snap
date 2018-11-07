@@ -3,7 +3,94 @@
 exports[`CurrentDirections should match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <CurrentDirections />,
+  Symbol(enzyme.__unrendered__): <CurrentDirections
+    directions={
+      Object {
+        "geocoded_waypoints": Array [
+          Object {
+            "geocoder_status": "OK",
+            "place_id": "ChIJa147K9HX3IAR-lwiGIQv9i4",
+            "types": Array [
+              "amusement_park",
+              "establishment",
+              "point_of_interest",
+            ],
+          },
+          Object {
+            "geocoder_status": "OK",
+            "place_id": "ChIJzzgyJU--woARcZqceSdQ3dM",
+            "types": Array [
+              "amusement_park",
+              "establishment",
+              "point_of_interest",
+            ],
+          },
+        ],
+        "routes": Array [
+          Object {
+            "bounds": Object {
+              "northeast": Object {
+                "lat": 34.1373841,
+                "lng": -117.9220826,
+              },
+              "southwest": Object {
+                "lat": 33.8151707,
+                "lng": -118.3575585,
+              },
+            },
+            "copyrights": "Map data ©2018 Google",
+            "legs": Array [
+              Object {
+                "distance": Object {
+                  "text": "36.0 mi",
+                  "value": 57975,
+                },
+                "duration": Object {
+                  "text": "51 mins",
+                  "value": 3078,
+                },
+                "end_address": "100 Universal City Plaza, Universal City, CA 91608, USA",
+                "end_location": Object {
+                  "lat": 34.1364887,
+                  "lng": -118.3569926,
+                },
+                "start_address": "1313 Disneyland Dr, Anaheim, CA 92802, USA",
+                "start_location": Object {
+                  "lat": 33.8162219,
+                  "lng": -117.9224731,
+                },
+                "steps": Array [
+                  Object {
+                    "distance": Object {
+                      "text": "59 ft",
+                      "value": 18,
+                    },
+                    "duration": Object {
+                      "text": "1 min",
+                      "value": 2,
+                    },
+                    "end_location": Object {
+                      "lat": 33.8160679,
+                      "lng": -117.9225314,
+                    },
+                    "html_instructions": "Head <b>south</b>",
+                    "polyline": Object {
+                      "points": "kvkmElvvnUJ",
+                    },
+                    "start_location": Object {
+                      "lat": 33.8162219,
+                      "lng": -117.9224731,
+                    },
+                    "travel_mode": "DRIVING",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      }
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -15,21 +102,1095 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
-    "props": Object {},
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="display-directions"
+      >
+        <h2>
+          Travel
+        </h2>
+        <div
+          className="starting-address"
+        >
+          <h3
+            className="directions"
+          >
+             
+            <span
+              className="text"
+            >
+               Travel Time:
+            </span>
+             
+            <span
+              className="result"
+            >
+              51 mins
+            </span>
+          </h3>
+          <h3
+            className="directions"
+          >
+             
+            <span
+              className="text"
+            >
+              Starting Address: 
+            </span>
+             
+            <span
+              className="result"
+            >
+              1313 Disneyland Dr, Anaheim, CA 92802, USA
+            </span>
+          </h3>
+        </div>
+        <div
+          className="ending-address"
+        >
+          <h3
+            className="directions"
+          >
+             
+            <span
+              className="text"
+            >
+               Distance in Miles:
+            </span>
+             
+            <span
+              className="result"
+            >
+              36.0 mi
+            </span>
+          </h3>
+          <h3
+            className="directions"
+          >
+             
+            <span
+              className="text"
+            >
+               Ending Address:
+            </span>
+            <span
+              className="result"
+            >
+               
+              100 Universal City Plaza, Universal City, CA 91608, USA
+            </span>
+          </h3>
+        </div>
+        <Connect(CurrentWeather) />
+        <div
+          className="map"
+        >
+          <img
+            className="mapping"
+            src="https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap &markers=size:mid%7Ccolor:green%7C33.8162219, -117.9224731%7C&markers=size:mid%7Ccolor:red%7C34.1364887, -118.3569926&key=AIzaSyA82too8VL24aPrNvt2kJhfLOpM-pGmXrY"
+          />
+        </div>
+      </div>,
+    },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Travel
+          </h2>,
+          <div
+            className="starting-address"
+          >
+            <h3
+              className="directions"
+            >
+               
+              <span
+                className="text"
+              >
+                 Travel Time:
+              </span>
+               
+              <span
+                className="result"
+              >
+                51 mins
+              </span>
+            </h3>
+            <h3
+              className="directions"
+            >
+               
+              <span
+                className="text"
+              >
+                Starting Address: 
+              </span>
+               
+              <span
+                className="result"
+              >
+                1313 Disneyland Dr, Anaheim, CA 92802, USA
+              </span>
+            </h3>
+          </div>,
+          <div
+            className="ending-address"
+          >
+            <h3
+              className="directions"
+            >
+               
+              <span
+                className="text"
+              >
+                 Distance in Miles:
+              </span>
+               
+              <span
+                className="result"
+              >
+                36.0 mi
+              </span>
+            </h3>
+            <h3
+              className="directions"
+            >
+               
+              <span
+                className="text"
+              >
+                 Ending Address:
+              </span>
+              <span
+                className="result"
+              >
+                 
+                100 Universal City Plaza, Universal City, CA 91608, USA
+              </span>
+            </h3>
+          </div>,
+          <Connect(CurrentWeather) />,
+          <div
+            className="map"
+          >
+            <img
+              className="mapping"
+              src="https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap &markers=size:mid%7Ccolor:green%7C33.8162219, -117.9224731%7C&markers=size:mid%7Ccolor:red%7C34.1364887, -118.3569926&key=AIzaSyA82too8VL24aPrNvt2kJhfLOpM-pGmXrY"
+            />
+          </div>,
+        ],
+        "className": "display-directions",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Travel",
+          },
+          "ref": null,
+          "rendered": "Travel",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="directions"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Travel Time:
+                </span>
+                 
+                <span
+                  className="result"
+                >
+                  51 mins
+                </span>
+              </h3>,
+              <h3
+                className="directions"
+              >
+                 
+                <span
+                  className="text"
+                >
+                  Starting Address: 
+                </span>
+                 
+                <span
+                  className="result"
+                >
+                  1313 Disneyland Dr, Anaheim, CA 92802, USA
+                </span>
+              </h3>,
+            ],
+            "className": "starting-address",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  <span
+                    className="text"
+                  >
+                     Travel Time:
+                  </span>,
+                  " ",
+                  <span
+                    className="result"
+                  >
+                    51 mins
+                  </span>,
+                ],
+                "className": "directions",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Travel Time:",
+                    "className": "text",
+                  },
+                  "ref": null,
+                  "rendered": " Travel Time:",
+                  "type": "span",
+                },
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "51 mins",
+                    "className": "result",
+                  },
+                  "ref": null,
+                  "rendered": "51 mins",
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  <span
+                    className="text"
+                  >
+                    Starting Address: 
+                  </span>,
+                  " ",
+                  <span
+                    className="result"
+                  >
+                    1313 Disneyland Dr, Anaheim, CA 92802, USA
+                  </span>,
+                ],
+                "className": "directions",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Starting Address: ",
+                    "className": "text",
+                  },
+                  "ref": null,
+                  "rendered": "Starting Address: ",
+                  "type": "span",
+                },
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "1313 Disneyland Dr, Anaheim, CA 92802, USA",
+                    "className": "result",
+                  },
+                  "ref": null,
+                  "rendered": "1313 Disneyland Dr, Anaheim, CA 92802, USA",
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="directions"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Distance in Miles:
+                </span>
+                 
+                <span
+                  className="result"
+                >
+                  36.0 mi
+                </span>
+              </h3>,
+              <h3
+                className="directions"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Ending Address:
+                </span>
+                <span
+                  className="result"
+                >
+                   
+                  100 Universal City Plaza, Universal City, CA 91608, USA
+                </span>
+              </h3>,
+            ],
+            "className": "ending-address",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  <span
+                    className="text"
+                  >
+                     Distance in Miles:
+                  </span>,
+                  " ",
+                  <span
+                    className="result"
+                  >
+                    36.0 mi
+                  </span>,
+                ],
+                "className": "directions",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Distance in Miles:",
+                    "className": "text",
+                  },
+                  "ref": null,
+                  "rendered": " Distance in Miles:",
+                  "type": "span",
+                },
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "36.0 mi",
+                    "className": "result",
+                  },
+                  "ref": null,
+                  "rendered": "36.0 mi",
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  <span
+                    className="text"
+                  >
+                     Ending Address:
+                  </span>,
+                  <span
+                    className="result"
+                  >
+                     
+                    100 Universal City Plaza, Universal City, CA 91608, USA
+                  </span>,
+                ],
+                "className": "directions",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": " Ending Address:",
+                    "className": "text",
+                  },
+                  "ref": null,
+                  "rendered": " Ending Address:",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "100 Universal City Plaza, Universal City, CA 91608, USA",
+                    ],
+                    "className": "result",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "100 Universal City Plaza, Universal City, CA 91608, USA",
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "h3",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <img
+              className="mapping"
+              src="https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap &markers=size:mid%7Ccolor:green%7C33.8162219, -117.9224731%7C&markers=size:mid%7Ccolor:red%7C34.1364887, -118.3569926&key=AIzaSyA82too8VL24aPrNvt2kJhfLOpM-pGmXrY"
+            />,
+            "className": "map",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "mapping",
+              "src": "https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap &markers=size:mid%7Ccolor:green%7C33.8162219, -117.9224731%7C&markers=size:mid%7Ccolor:red%7C34.1364887, -118.3569926&key=AIzaSyA82too8VL24aPrNvt2kJhfLOpM-pGmXrY",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
-      "props": Object {},
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="display-directions"
+        >
+          <h2>
+            Travel
+          </h2>
+          <div
+            className="starting-address"
+          >
+            <h3
+              className="directions"
+            >
+               
+              <span
+                className="text"
+              >
+                 Travel Time:
+              </span>
+               
+              <span
+                className="result"
+              >
+                51 mins
+              </span>
+            </h3>
+            <h3
+              className="directions"
+            >
+               
+              <span
+                className="text"
+              >
+                Starting Address: 
+              </span>
+               
+              <span
+                className="result"
+              >
+                1313 Disneyland Dr, Anaheim, CA 92802, USA
+              </span>
+            </h3>
+          </div>
+          <div
+            className="ending-address"
+          >
+            <h3
+              className="directions"
+            >
+               
+              <span
+                className="text"
+              >
+                 Distance in Miles:
+              </span>
+               
+              <span
+                className="result"
+              >
+                36.0 mi
+              </span>
+            </h3>
+            <h3
+              className="directions"
+            >
+               
+              <span
+                className="text"
+              >
+                 Ending Address:
+              </span>
+              <span
+                className="result"
+              >
+                 
+                100 Universal City Plaza, Universal City, CA 91608, USA
+              </span>
+            </h3>
+          </div>
+          <Connect(CurrentWeather) />
+          <div
+            className="map"
+          >
+            <img
+              className="mapping"
+              src="https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap &markers=size:mid%7Ccolor:green%7C33.8162219, -117.9224731%7C&markers=size:mid%7Ccolor:red%7C34.1364887, -118.3569926&key=AIzaSyA82too8VL24aPrNvt2kJhfLOpM-pGmXrY"
+            />
+          </div>
+        </div>,
+      },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              Travel
+            </h2>,
+            <div
+              className="starting-address"
+            >
+              <h3
+                className="directions"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Travel Time:
+                </span>
+                 
+                <span
+                  className="result"
+                >
+                  51 mins
+                </span>
+              </h3>
+              <h3
+                className="directions"
+              >
+                 
+                <span
+                  className="text"
+                >
+                  Starting Address: 
+                </span>
+                 
+                <span
+                  className="result"
+                >
+                  1313 Disneyland Dr, Anaheim, CA 92802, USA
+                </span>
+              </h3>
+            </div>,
+            <div
+              className="ending-address"
+            >
+              <h3
+                className="directions"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Distance in Miles:
+                </span>
+                 
+                <span
+                  className="result"
+                >
+                  36.0 mi
+                </span>
+              </h3>
+              <h3
+                className="directions"
+              >
+                 
+                <span
+                  className="text"
+                >
+                   Ending Address:
+                </span>
+                <span
+                  className="result"
+                >
+                   
+                  100 Universal City Plaza, Universal City, CA 91608, USA
+                </span>
+              </h3>
+            </div>,
+            <Connect(CurrentWeather) />,
+            <div
+              className="map"
+            >
+              <img
+                className="mapping"
+                src="https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap &markers=size:mid%7Ccolor:green%7C33.8162219, -117.9224731%7C&markers=size:mid%7Ccolor:red%7C34.1364887, -118.3569926&key=AIzaSyA82too8VL24aPrNvt2kJhfLOpM-pGmXrY"
+              />
+            </div>,
+          ],
+          "className": "display-directions",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Travel",
+            },
+            "ref": null,
+            "rendered": "Travel",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="directions"
+                >
+                   
+                  <span
+                    className="text"
+                  >
+                     Travel Time:
+                  </span>
+                   
+                  <span
+                    className="result"
+                  >
+                    51 mins
+                  </span>
+                </h3>,
+                <h3
+                  className="directions"
+                >
+                   
+                  <span
+                    className="text"
+                  >
+                    Starting Address: 
+                  </span>
+                   
+                  <span
+                    className="result"
+                  >
+                    1313 Disneyland Dr, Anaheim, CA 92802, USA
+                  </span>
+                </h3>,
+              ],
+              "className": "starting-address",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    <span
+                      className="text"
+                    >
+                       Travel Time:
+                    </span>,
+                    " ",
+                    <span
+                      className="result"
+                    >
+                      51 mins
+                    </span>,
+                  ],
+                  "className": "directions",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Travel Time:",
+                      "className": "text",
+                    },
+                    "ref": null,
+                    "rendered": " Travel Time:",
+                    "type": "span",
+                  },
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "51 mins",
+                      "className": "result",
+                    },
+                    "ref": null,
+                    "rendered": "51 mins",
+                    "type": "span",
+                  },
+                ],
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    <span
+                      className="text"
+                    >
+                      Starting Address: 
+                    </span>,
+                    " ",
+                    <span
+                      className="result"
+                    >
+                      1313 Disneyland Dr, Anaheim, CA 92802, USA
+                    </span>,
+                  ],
+                  "className": "directions",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Starting Address: ",
+                      "className": "text",
+                    },
+                    "ref": null,
+                    "rendered": "Starting Address: ",
+                    "type": "span",
+                  },
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "1313 Disneyland Dr, Anaheim, CA 92802, USA",
+                      "className": "result",
+                    },
+                    "ref": null,
+                    "rendered": "1313 Disneyland Dr, Anaheim, CA 92802, USA",
+                    "type": "span",
+                  },
+                ],
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="directions"
+                >
+                   
+                  <span
+                    className="text"
+                  >
+                     Distance in Miles:
+                  </span>
+                   
+                  <span
+                    className="result"
+                  >
+                    36.0 mi
+                  </span>
+                </h3>,
+                <h3
+                  className="directions"
+                >
+                   
+                  <span
+                    className="text"
+                  >
+                     Ending Address:
+                  </span>
+                  <span
+                    className="result"
+                  >
+                     
+                    100 Universal City Plaza, Universal City, CA 91608, USA
+                  </span>
+                </h3>,
+              ],
+              "className": "ending-address",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    <span
+                      className="text"
+                    >
+                       Distance in Miles:
+                    </span>,
+                    " ",
+                    <span
+                      className="result"
+                    >
+                      36.0 mi
+                    </span>,
+                  ],
+                  "className": "directions",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Distance in Miles:",
+                      "className": "text",
+                    },
+                    "ref": null,
+                    "rendered": " Distance in Miles:",
+                    "type": "span",
+                  },
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "36.0 mi",
+                      "className": "result",
+                    },
+                    "ref": null,
+                    "rendered": "36.0 mi",
+                    "type": "span",
+                  },
+                ],
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    <span
+                      className="text"
+                    >
+                       Ending Address:
+                    </span>,
+                    <span
+                      className="result"
+                    >
+                       
+                      100 Universal City Plaza, Universal City, CA 91608, USA
+                    </span>,
+                  ],
+                  "className": "directions",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": " Ending Address:",
+                      "className": "text",
+                    },
+                    "ref": null,
+                    "rendered": " Ending Address:",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        " ",
+                        "100 Universal City Plaza, Universal City, CA 91608, USA",
+                      ],
+                      "className": "result",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      " ",
+                      "100 Universal City Plaza, Universal City, CA 91608, USA",
+                    ],
+                    "type": "span",
+                  },
+                ],
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                className="mapping"
+                src="https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap &markers=size:mid%7Ccolor:green%7C33.8162219, -117.9224731%7C&markers=size:mid%7Ccolor:red%7C34.1364887, -118.3569926&key=AIzaSyA82too8VL24aPrNvt2kJhfLOpM-pGmXrY"
+              />,
+              "className": "map",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "mapping",
+                "src": "https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap &markers=size:mid%7Ccolor:green%7C33.8162219, -117.9224731%7C&markers=size:mid%7Ccolor:red%7C34.1364887, -118.3569926&key=AIzaSyA82too8VL24aPrNvt2kJhfLOpM-pGmXrY",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

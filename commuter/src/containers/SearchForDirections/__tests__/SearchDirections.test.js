@@ -23,7 +23,8 @@ describe('SearchDirections', () => {
     const defaultState = {
       origin: '',
       destination: '',
-      mode: ''
+      mode: '',
+      userwarning: ''
     }
     expect(wrapper.state()).toEqual(defaultState)
   });
