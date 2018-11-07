@@ -1,13 +1,36 @@
 .display-directions {
+  width: 100vw;
+  align-items: center;
+  height: 800px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 400px 1fr;
+}
+.direction-text {
+  /*border: solid 1px;*/
+  width: 300px;
+  margin-top: 40px;
+  display: grid;
   justify-content: center;
-  margin: 50px;
-  height: 120px;
+  align-items: center;
+  /*border-radius: 10%;*/
 }
 
-.direction-text {
+.directions-box {
+  display: flex;
+  grid-row: 1 / span 1;
+  justify-content: center;
+  align-items: center;
+}
 
+.map {
+  text-align: center;
+  /*grid-column: 2 / span 1;*/
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  margin-top: 50px;
+  border-radius: 10%;
 }
 
 h3 {
@@ -19,4 +42,8 @@ h3 {
 .text {
   color: #9aabb9;
   font: 600 20px/1.7 'Open Sans', sans-serif;
+}
+
+.directions, .directions-weather {
+  font-size: 20px;
 }
