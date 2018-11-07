@@ -22,22 +22,22 @@ export class CurrentDirections extends Component {
   const endLng = this.props.directions.routes[0].legs[0].end_location.lng
     try{
         return (
-          <div className='display-directions'>
-            <div>
-              <img className ='map' src={`https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\ &markers=size:mid%7Ccolor:green%7C${startLat}, ${startLng}%7C&markers=size:mid%7Ccolor:red%7C${endLat}, ${endLng}&key=${gmapApi}`}/>
-            </div>
-            <div className='directions-box'>
-            <div className='direction-text'>
-              <h3 className='directions'> <span className='text'>Starting Address: </span> <span className='result'>{this.props.directions.routes[0].legs[0].start_address}</span></h3>
-              <h3 className='directions'> <span className='text'> Ending Address:</span><span className='result'> {this.props.directions.routes[0].legs[0].end_address}</span></h3>
-              <h3 className='directions'> <span className='text'> Travel Time:</span> <span className='result'>{this.props.directions.routes[0].legs[0].duration.text}</span></h3>
-              <h3 className='directions'> <span className='text'> Distance in Miles:</span> <span className='result'>{this.props.directions.routes[0].legs[0].distance.text}</span></h3>
-            </div>  
-            </div>
-            <CurrentWeather />
-            <div className='new-search-btn'>  
-              <NavLink to='/'> <button className='redo'>New Search</button></NavLink>
-            </div>                
+          <div>
+            <div className='display-directions'>
+              <h2>Travel</h2>
+              <div className='starting-address'>
+                <h3 className='directions'> <span className='text'> Travel Time:</span> <span className='result'>{this.props.directions.routes[0].legs[0].duration.text}</span></h3>  
+                <h3 className='directions'> <span className='text'>Starting Address: </span> <span className='result'>{this.props.directions.routes[0].legs[0].start_address}</span></h3>                      
+              </div>
+              <div className='ending-address'>
+                <h3 className='directions'> <span className='text'> Distance in Miles:</span> <span className='result'>{this.props.directions.routes[0].legs[0].distance.text}</span></h3>            
+                <h3 className='directions'> <span className='text'> Ending Address:</span><span className='result'> {this.props.directions.routes[0].legs[0].end_address}</span></h3>
+                </div>
+              <CurrentWeather />
+            <div className='map'>
+              <img className ='mapping' src={`https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\ &markers=size:mid%7Ccolor:green%7C${startLat}, ${startLng}%7C&markers=size:mid%7Ccolor:red%7C${endLat}, ${endLng}&key=${gmapApi}`}/>
+            </div>            
+          </div>
           </div>
         )
     } catch {

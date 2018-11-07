@@ -1,22 +1,21 @@
-.weather-section {
-  display: grid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 550px;
-/*  border: solid 1px;
-  border-radius: 5%;*/
-}
-
 .weather-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+}
+.weather {
+  position: relative;
+  left: 527px;
+  bottom: 105px;
 }
 
-.weather, .start-weather {
-  margin-right: 40px;
-  margin-bottom: 40px;
+.start-weather {
+  margin-left: 35px;
+  margin-top: 270px;
+}
+
+.weather-header {
+  position: relative;
+  top: 230px;
 }
 
 .redo {
@@ -37,11 +36,13 @@
   background-color: #193446;
 }
 
-.result {
-  display: block;
+.icon {
+  position: relative;
+  top: 20px;
+  height: 45px;
 }
 
-.new-search-btn { 
-  margin-left: 200px;
-  margin-bottom: 100px;
+.new-search-btn {
+  display: grid;
+  justify-content: center;
 }
