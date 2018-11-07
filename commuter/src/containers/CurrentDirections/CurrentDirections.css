@@ -1,42 +1,40 @@
 .display-directions {
-  width: 100vw;
-  align-items: center;
-  height: 800px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 400px 1fr;
-}
-.direction-text {
-  /*border: solid 1px;*/
-  width: 300px;
-  margin-top: 40px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  /*border-radius: 10%;*/
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 200px 200px
 }
 
-.directions-box {
-  display: flex;
+.starting-address {
+  display: grid;
+  justify-content: center;
+  margin-top: 100px;
+  grid-column: 1 / span 1;
   grid-row: 1 / span 1;
-  justify-content: center;
-  align-items: center;
 }
 
-.map {
-  text-align: center;
-  /*grid-column: 2 / span 1;*/
-  /*display: flex;*/
-  /*align-items: center;*/
-  /*justify-content: center;*/
-  margin-top: 50px;
-  border-radius: 10%;
+.ending-address {
+  display: grid;
+  justify-content: center;
+  margin-top: 100px;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
 }
+
 
 h3 {
   color: #193446;
   margin: 10px;
   font: 300 18px/1.7 'Open Sans', sans-serif;
+}
+
+h2 {
+  display: grid;
+  justify-content: center;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+  color: #193446;
+  margin: 10px;
+  font: 300 30px/1.7 'Open Sans', sans-serif;  
 }
 
 .text {
@@ -46,4 +44,17 @@ h3 {
 
 .directions, .directions-weather {
   font-size: 20px;
+}
+
+
+.map {
+  grid-column: 3 / span 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  border-radius: 10%;
+}
+
+.mapping {
+  border-radius: 10%;
 }
