@@ -46,3 +46,208 @@
   display: grid;
   justify-content: center;
 }
+
+
+@media (max-width: 1680px) {
+  .weather {
+  position: relative;
+  left: 440px;
+  bottom: 105px;
+}
+
+.start-weather {
+  margin-left: 10px;
+  margin-top: 270px;
+}
+
+} 
+
+@media (max-width: 1580px) {
+  .weather {
+  position: relative;
+  left: 420px;
+  bottom: 105px;
+}
+
+.start-weather {
+  margin-left: 1px;
+  margin-top: 270px;
+}
+
+} 
+
+@media (max-width: 1465px) {
+  .weather {
+  position: relative;
+  left: 380px;
+  bottom: 105px;
+}
+
+.start-weather {
+  margin-left: 1px;
+  margin-top: 270px;
+}
+
+} 
+
+@media (max-width: 1415px) {
+  .weather {
+  position: relative;
+  left: 350px;
+  bottom: 105px;
+}
+
+.start-weather {
+  margin-left: 1px;
+  margin-top: 270px;
+}
+
+} 
+
+@media (max-width: 1215px) {
+  .weather {
+  position: relative;
+  left: 320px;
+  bottom: 105px;
+}
+
+.start-weather {
+  margin-left: 1px;
+  margin-top: 270px;
+}
+
+} 
+
+
+@media (max-width: 1190px) {
+  .weather {
+  display: inline-block;
+  left: 0px;
+  top: 0px;
+}
+
+.start-weather {
+  position: flex;
+  margin-left: 1px;
+  margin-top: 270px;
+}
+
+}
+
+@media (max-width: 1070px) {
+  .mapping {
+    width: 450px;
+  }
+  .weather {
+  display: inline-block;
+  left: 0px;
+  top: 0px;
+}
+
+.start-weather {
+  position: flex;
+  margin-left: 1px;
+  margin-top: 400px;
+}
+
+}
+
+@media (max-width: 850px) {
+  .mapping {
+    width: 400px;
+  }
+  .weather {
+  display: inline-block;
+  left: 0px;
+  top: 0px;
+}
+
+.start-weather {
+  position: flex;
+  margin-left: 1px;
+  margin-top: 500px;
+}
+
+.weather-header {
+ display: none;
+}
+
+}
+
+@media (max-width: 758px) {
+
+  .mapping {
+    position: relative;
+    right: 30px;
+    width: 370px;
+  }
+  .weather {
+    display: inline-block;
+    left: 0px;
+    top: 0px;
+  }
+
+.start-weather {
+  position: flex;
+  margin-left: 1px;
+  margin-top: 500px;
+}
+
+.weather-header {
+ display: none;
+}
+}
+
+@media (max-width: 640px) {
+
+.mapping {
+  right: 100px;
+}
+.start-weather {
+  grid-column: 1 / span 2;
+  display: flex;
+  margin-left: 240px;
+  margin-top: 500px;
+}
+.weather {
+  grid-column: 1 / span 2;
+  display: flex;
+  margin-left: 240px;
+  }
+
+.icon {
+  position: relative;
+  top: -38px;
+  left: 100px;
+  height: 45px;
+}
+
+.new-search-btn {
+  position: relative;
+  left: 200px;
+}
+
+}
+
+@media (max-width: 569px) {
+
+.start-weather, .weather {
+  margin-left: 100px;
+}
+
+.new-search-btn {
+  left: 100px;
+}
+}
+
+@media (max-width: 479px) {
+
+.start-weather, .weather {
+  margin-left: 100px;
+}
+
+.new-search-btn {
+  left: 100px;
+}
+}
+
