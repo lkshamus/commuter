@@ -12,6 +12,8 @@ import './CurrentWeather.css'
 export class CurrentWeather extends Component {
 
   render () {
+    let weatherIconOrigin = this.props.currentWeather.weather[0].icon
+    let weatherIconDestination = this.props.destinationWeather.list[0].weather[0].icon
     try{
       return (
         <div className='weather-box'>    
@@ -19,12 +21,12 @@ export class CurrentWeather extends Component {
             <div className='start-weather'>
               <h3 className='directions-weather'> <span className='text'> Origin Weather: </span><span className='result'>{this.props.currentWeather.name}</span></h3>
               <h3 className='directions-weather'> <span className='text'> Weather in </span><span className='result'>{Math.round((this.props.currentWeather.main.temp - 273.15) * 9 / 5 + 32)}°F</span></h3>
-              <h3 className='directions-weather'> <span className='text'> Current Conditions: </span><span className='result'>{this.props.currentWeather.weather[0].description}</span></h3>
+              <h3 className='directions-weather'> <span className='text'> Current Conditions: </span><span className='result'>{this.props.currentWeather.weather[0].description} <img src={`http://openweathermap.org/img/w/${weatherIconOrigin}.png`}/></span></h3>
             </div>
             <div className='weather'>
               <h3 className='directions-weather'> <span className='text'> Destination Weather:  </span> <span className='result'>{this.props.destinationWeather.city.name}</span></h3>
               <h3 className='directions-weather'> <span className='text'> Weather in </span><span className='result'>{Math.round((this.props.destinationWeather.list[0].main.temp - 273.15) * 9 / 5 + 32)}°F</span></h3>
-              <h3 className='directions-weather'> <span className='text'> Current Conditions:  </span><span className='result'>{this.props.destinationWeather.list[0].weather[0].description}</span></h3>
+              <h3 className='directions-weather'> <span className='text'> Current Conditions:  </span><span className='result'>{this.props.destinationWeather.list[0].weather[0].description}<img src={`http://openweathermap.org/img/w/${weatherIconDestination}.png`}/></span></h3>
             </div>
           </div>
         </div>
