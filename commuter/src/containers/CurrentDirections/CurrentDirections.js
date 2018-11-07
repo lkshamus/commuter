@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { NavLink } from "react-router-dom";
 
-import { getCurrentDirections } from '../../actions/thunks/searchDirectionsThunk'
-import { setDirections } from '../../actions'
-import { getCurrentWeather } from '../../actions/thunks/searchWeatherThunk'
-import { setCurrentWeather } from '../../actions'
-import { updateSearchWeather } from '../../actions'
 import CurrentWeather from '../CurrentWeather/CurrentWeather'
 import Loading from '../../components/Loading/index'
 import { gmapApi } from '../../utilities/APIkey'
@@ -35,7 +29,7 @@ export class CurrentDirections extends Component {
                 </div>
               <CurrentWeather />
             <div className='map'>
-              <img className ='mapping' src={`https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\ &markers=size:mid%7Ccolor:green%7C${startLat}, ${startLng}%7C&markers=size:mid%7Ccolor:red%7C${endLat}, ${endLng}&key=${gmapApi}`}/>
+              <img alt='map' className ='mapping' src={`https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\ &markers=size:mid%7Ccolor:green%7C${startLat}, ${startLng}%7C&markers=size:mid%7Ccolor:red%7C${endLat}, ${endLng}&key=${gmapApi}`}/>
             </div>            
           </div>
           </div>
