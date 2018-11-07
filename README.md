@@ -1,7 +1,7 @@
 # commuter
 
 # Description
-Commuter is a web application designed to prepare mass transit commuters for the weather that lies ahead. Users can search any route internationally, choosing their means of travel (transit, car, bicycle, or walking directions) and see the weather at their desired origin and destination. The routes are provided by Google Maps and Google Directions APIs and the weather is provided by Open Weather API. 
+Commuter is a web application designed to prepare mass transit commuters for the weather that lies ahead. Users can search any route internationally, choosing their means of travel (transit, car, bicycle, or walking directions) and see the weather at their desired origin and destination. The routes are provided by Google Static Maps and Google Directions APIs and the weather is provided by Open Weather API. 
 
 # Installation
 
@@ -25,7 +25,7 @@ and start your server with:
 * Enzyme/Jest
 * HTML5/CSS3
 * Git/GitHub
-* Google Maps API
+* Google Static Maps API
 * Google Directions API
 * Open Weather API
 
